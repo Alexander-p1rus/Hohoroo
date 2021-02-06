@@ -1,0 +1,127 @@
+.first-block button, .menu button {
+  color: #171717;
+  background-color: #fcee21;
+  height: 40px;
+  font-size: 14px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.conteiner {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "FuturaPT-book", sans-serif;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+  padding: 20px 0;
+  top: 0;
+}
+.menu img {
+  width: 250px;
+  margin-left: 35px;
+}
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -50px;
+}
+.menu-list__item {
+  margin: 0 20px;
+  color: #141414;
+  font-size: 19px;
+  font-weight: 600;
+}
+.menu button {
+  margin-right: 35px;
+}
+
+.first-block {
+  overflow-x: hidden;
+  background-image: url("../img/first block/background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 65%;
+  display: flex;
+  margin-top: 100px;
+}
+.first-block__marketing {
+  margin-right: 50px;
+  margin-left: 150px;
+}
+.first-block__marketing img {
+  width: 20px;
+  height: 20px;
+}
+.first-block__marketing h2 {
+  color: #1bcf7b;
+  font-size: 46px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+.first-block__marketing .price {
+  margin-top: 15px;
+  color: #000000;
+  font-size: 23px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  font-weight: 700;
+}
+.first-block__marketing .price .green {
+  color: #1bcf7b;
+  font-weight: 700;
+}
+.first-block__marketing .flex {
+  margin-top: 30px;
+}
+.first-block__marketing .flex-list {
+  vertical-align: center;
+  margin-top: 20px;
+}
+.first-block__marketing .flex-list__text {
+  color: #000000;
+  font-size: 18px;
+  font-family: "FuturaPT-book", sans-serif;
+  line-height: 1.15;
+  font-weight: 400;
+  display: inline-block;
+}
+.first-block__marketing .flex-list img {
+  margin-right: 8px;
+  display: inline-block;
+}
+.first-block button {
+  margin-top: 30px;
+  color: #121212;
+  font-size: 16.5px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.45;
+  font-weight: 600;
+  border-radius: 100px;
+  background-color: #fcee21;
+  border-color: transparent;
+  width: 280px;
+  height: 75px;
+  transition-duration: 1s;
+}
+.first-block button:hover {
+  background-color: #d6ba2f;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.first-block__img img {
+  width: 800px;
+  height: 600px;
+}

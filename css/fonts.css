@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "FuturaPT-book";
+
+    src: url("../fonts/futura_pt_book.eot") format('embedded-opentype'),
+    url("../fonts/futura_pt_book.ttf ") format('truetype'),
+    url("../fonts/futura_pt_book.woff") format('woff'),
+    url("../fonts/futura_pt_book.woff2") format('woff2');
+}
