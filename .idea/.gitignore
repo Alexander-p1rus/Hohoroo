@@ -3,3 +3,8 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+../prepros.config
+../sass/
+/vcs.xml
+/modulex.xml
+/hohoro.iml
