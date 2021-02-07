@@ -1,4 +1,4 @@
-.first-block button, .menu button {
+.business-block-advantages .flex-wrapper__item h3 button, .first-block button, .menu button {
   color: #171717;
   background-color: #fcee21;
   height: 40px;
@@ -9,7 +9,7 @@
   outline: none;
 }
 
-.conteiner {
+.container {
   width: 1170px;
   margin: 0 auto;
 }
@@ -54,7 +54,7 @@ body {
   background-image: url("../img/first block/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left 65%;
+  background-position: left 70%;
   display: flex;
   margin-top: 100px;
 }
@@ -124,4 +124,60 @@ body {
 .first-block__img img {
   width: 800px;
   height: 600px;
+}
+
+.business-block {
+  background-image: url("../img/second block/background.webp");
+}
+.business-block-advantages {
+  padding-top: 120px;
+  text-align: center;
+}
+.business-block-advantages h2 {
+  margin-top: 0;
+  color: #000000;
+  font-size: 44px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.business-block-advantages .subtitle {
+  margin-top: 50px;
+  color: #000000;
+  font-size: 22px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.15;
+  font-weight: 400;
+}
+.business-block-advantages .flex-wrapper {
+  margin-top: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  text-align: start;
+}
+.business-block-advantages .flex-wrapper__item {
+  width: 400px;
+}
+.business-block-advantages .flex-wrapper__item img {
+  width: 55px;
+  height: 55px;
+}
+.business-block-advantages .flex-wrapper__item h3 {
+  color: #000000;
+  font-size: 23px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 700;
+  margin-top: 40px;
+}
+.business-block-advantages .flex-wrapper__item h3 .descr {
+  color: #000000;
+  font-size: 18px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.business-block-advantages .second-row {
+  margin-top: 80px;
 }
