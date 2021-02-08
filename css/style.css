@@ -67,7 +67,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 0;
+  flex-direction: row;
 }
 .first-block__marketing img {
   width: 20px;
@@ -331,9 +331,28 @@ body {
   border-radius: 50%;
   background-color: #1bcf7b;
   position: relative;
+  margin-right: 20px;
+}
+.accordion-block .accordion-wrapper .wrapper .circle:hover{
+  background-color: #fcee21;
 }
 .accordion-block .accordion-wrapper .wrapper .circle .active {
   color: #fcee21;
+}
+.plus {
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width:50px;
+  height:50px;
+
+  background:
+          linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
+          linear-gradient(#000000, rgb(0, 0, 0)),
+          rgba(255, 231, 231, 0);
+  background-position:center;
+  background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+  background-repeat:no-repeat;
 }
 .accordion-block .accordion-wrapper .accordion-section {
   margin-top: 3px;
@@ -361,4 +380,115 @@ body {
   font-family: "FuturaPT", Arial, sans-serif;
   font-weight: 300;
   color: #000;
+}
+
+
+
+
+
+.calculator-block{
+  padding: 10px;
+  margin-top: 150px;
+}
+.rangeslider {
+  display: inline-block;
+  width: 70%;
+}
+.add {
+  font-size: 22px;
+  background: #1bcf7b;
+  color: white;
+  border-radius: 30px;
+  width: 80px;
+  float: right;
+  margin-top: 0px;
+  margin-right: 80px;
+  text-align:center;
+}
+
+.val1.add {
+  background-color: #fcee21;
+}
+.val1.add::before {
+  content:" ";
+}
+.ranges { width: 70%; padding-bottom:30px; }
+.range-center {
+  margin-top:-5px;
+  margin-bottom:5px;
+  /* border-top: 1px solid #999; */
+  height: 4px;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+0,8f0222+48,ffffff+100 */
+  background: rgb(252, 238, 33); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgb(27, 207, 123) 48%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(0%,rgba(255,255,255,1)), color-stop(48%, rgb(27, 207, 123)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%, rgb(27, 207, 123) 48%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%, rgb(27, 207, 123) 48%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%, rgb(27, 207, 123) 48%,rgba(255,255,255,1) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%, rgb(27, 207, 123) 48%,rgba(255,255,255,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+
+
+
+}
+.range-left {
+  margin-top:5px;
+  float: left;
+  font-size: 10px;
+}
+.range-right {
+  margin-top:-5px;
+  float: right;
+  font-size: 10px;
+}
+
+
+.title {
+  padding-top: 5px;
+  font-weight: bold;
+}
+.description {
+  font-size:0.7em;
+  padding-bottom:10px;
+  font-style: italic;
+  color: gray;
+
+}
+.box {
+  padding-top: 30px;
+  font-size: 2em;
+}
+
+#total {
+  background: #1bcf7b;
+  color: white;
+  border-radius: 30px;
+  width: 420px;
+  text-align:center;
+  margin-bottom:30px;
+}
+#total::before {
+  content: "Total: ";
+}
+.rangeslider__handle {
+  width: 30px;
+  height: 30px;
+}
+.rangeslider__fill {
+  height: 10px;
+}
+.rangeslider__handle {
+  width: 30px;
+  height: 30px;
+}
+.rangeslider {
+  height: 10px;
+}
+.rangeslider__fill {
+  background: #A00303;
+}
+.ranges {
+  padding-bottom:20px;
 }
