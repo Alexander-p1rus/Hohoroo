@@ -11,6 +11,9 @@ $main-font:'FuturaPT-book',sans-serif
   padding-right: 30px
   border-radius: 20px
   outline: none
+  border: none
+  font-weight: bold
+  cursor: pointer
 
 
 .container
@@ -47,6 +50,8 @@ body
       font-weight: 600
   button
     @extend %button
+    font-weight: bold
+    border: none
     margin-right: 35px
 
 
@@ -59,9 +64,13 @@ body
   background-position: left 70%
   display: flex
   margin-top: 100px
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 60px 0
   &__marketing
-    margin-right: 50px
-    margin-left: 150px
+    //display: inline-block
     img
       width: 20px
       height: 20px
@@ -95,6 +104,8 @@ body
         img
           margin-right: 8px
           display: inline-block
+  &__img
+    //display: inline-block
 
   button
     @extend %button
@@ -121,6 +132,9 @@ body
 
 .business-block
   background-image: url("../img/second block/background.webp")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: left 1%
   &-advantages
     padding-top: 120px
     text-align: center
@@ -157,13 +171,163 @@ body
           line-height: 1.55
           font-weight: 700
           margin-top: 40px
-          .descr
-            color: #000000
-            font-size: 18px
-            font-family: 'FuturaPT',Arial,sans-serif
-            line-height: 1.55
-            font-weight: 400
-          button
-            @extend %button
+        .descr
+          color: #000000
+          font-size: 18px
+          font-family: 'FuturaPT',Arial,sans-serif
+          line-height: 1.55
+          font-weight: 400
+        button
+          @extend %button
+          width: 270px
+          height: 60px
+          border-radius: 100px
     .second-row
       margin-top: 80px
+.third-block
+  margin-top: 190px
+
+.pattern
+  span
+    color: $x-color-green
+  .main-title
+    text-align: center
+    font-size: 46px
+    font-family: 'FuturaPT'
+    font-weight: 600
+    color: #000
+    line-height: 1.23
+
+  .main-flex-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__item
+      img
+        width: 470px
+        height: 340px
+      h3
+        font-weight: 600
+        color: #000
+        line-height: 1.35
+        font-size: 30px
+        font-family: 'FuturaPT'
+        margin-bottom: 0
+        margin-top: 20px
+      ul
+        margin-top: 30px
+        padding: 0
+        li
+          font-weight: 300
+          color: #000
+          line-height: 1.55
+          font-size: 20px
+          font-family: 'FuturaPT'
+          margin-top: 5px
+
+.video-block
+  background-color: #4CF2A2
+  padding: 120px 0
+  .wrapper
+    text-align: center
+    h3
+      font-size: 52px
+      font-family: FuturaPT
+      font-weight: 600
+      color: #000
+      margin-bottom: 0
+      margin-top: 0
+    .subtitle
+      font-weight: 700
+      font-size: 23px
+      font-weight: 700
+      margin-top: 20px
+      margin-bottom: 55px
+    button
+      @extend   %button
+      display: block
+      margin: 55px auto 0 auto
+      font-size: 16px
+      height: 60px
+      border-radius: 40px
+      padding-left: 60px
+      padding-right: 60px
+      font-weight: 800
+      font-family: 'FuturaPT'
+
+
+
+.founder-block
+  margin-top: 120px
+  .pattern
+    .main-flex-wrapper
+      margin-top: 80px
+    h2
+      font-size: 52px
+      font-family: 'FuturaPT'
+      line-height: 1.23
+      font-weight: 700
+    img
+      width: 470px
+      height: 470px
+    button
+      @extend %button
+      text-align: start
+      margin-left: -20px
+.accordion-block
+  margin-top: 140px
+  margin-bottom: 100px
+  h2
+    text-align: center
+    margin-bottom: 80px
+    font-family: 'FuturaPT',Arial,sans-serif
+    font-weight: 600
+    color: #000
+    line-height: 1.23
+  .accordion-wrapper
+    .wrapper
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .town
+        margin-left: 20px
+        font-size: 24px
+        line-height: 1.35
+        font-family: 'FuturaPT',Arial,sans-serif
+        font-weight: bold
+        color: #000
+      .circle
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        background-color: $x-color-green
+        position: relative
+        .active
+          color: #fcee21
+    .accordion-section
+      margin-top: 3px
+      .accordion-header
+        cursor: pointer
+        height: 80px
+        background-color: #f2f2f2
+        &:hover
+          background-color: #cbc9c9
+          transition: all 500ms ease
+      .accordion-body
+        max-height: 0
+        overflow: hidden
+        transition:  all .4s ease .4s
+        transition-delay: 0s
+        background-color: #f2f2f2
+        ul
+          li
+            margin-top: 5px
+            font-size: 16px
+            line-height: 1.55
+            font-family: 'FuturaPT',Arial,sans-serif
+            font-weight: 300
+            color: #000
+
+
