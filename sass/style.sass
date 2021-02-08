@@ -39,6 +39,8 @@ body
   img
     width: 250px
     margin-left: 35px
+    a
+      text-decoration: none
   &-list
     display: flex
     justify-content: space-between
@@ -68,7 +70,7 @@ body
     display: flex
     justify-content: space-between
     align-items: center
-    flex-direction: row;
+    flex-direction: row
   &__marketing
     //display: inline-block
     img
@@ -330,4 +332,74 @@ body
             font-weight: 300
             color: #000
 
+.partners
+  padding: 100px 0
+  .title
+    text-align: center
+    h2
+      margin-bottom: 125px
+      font-size: 52px
+      font-family: 'FuturaPT'
+      font-weight: 600
+      color: #000
+      line-height: 1.23
+      span
+        color: $x-color-green
+  &-flex__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    .flex__item
+      width: 350px
+      height: 170px
+      text-align: center
+      img
+        max-width: 350px
+        max-height: 140px
+  .btn
+    text-align: center
+    button
+      @extend %button
+      padding: 0 60px
+      border-radius: 30px
+      height: 60px
 
+.footer
+  background-color: #01F2A1
+  padding: 20px 0
+  .flex-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__item
+      .logo
+        img
+          width: 230px
+          height: 50px
+      .contacts-flex
+        display: flex
+        flex-direction: column
+        text-align: center
+        &__item
+          color: #000000
+          font-size: 14px
+          font-family: 'FuturaPT',Arial,sans-serif
+          line-height: 1.55
+          font-weight: 700
+        a
+          text-decoration: underline
+          color: #ff8562
+          .orange
+            color: #ff8562
+      .instagram-block
+        display: flex
+        img
+          width: 25px
+          height: 25px
+        .text
+          color: #000000
+          font-size: 16px
+          font-family: 'FuturaPT',Arial,sans-serif
+          line-height: 1.55
+          font-weight: 600

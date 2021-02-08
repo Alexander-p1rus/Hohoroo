@@ -1,8 +1,8 @@
-.founder-block .pattern button, .video-block .wrapper button, .business-block-advantages .flex-wrapper__item button, .first-block button, .menu button {
+.partners .btn button, .founder-block .pattern button, .video-block .wrapper button, .business-block-advantages .flex-wrapper__item button, .first-block button, .menu button {
   color: #171717;
   background-color: #fcee21;
   height: 40px;
-  font-size: 14px;
+  font-size: 18px;
   padding-left: 30px;
   padding-right: 30px;
   border-radius: 20px;
@@ -36,6 +36,9 @@ body {
 .menu img {
   width: 250px;
   margin-left: 35px;
+}
+.menu img a {
+  text-decoration: none;
 }
 .menu-list {
   display: flex;
@@ -113,7 +116,7 @@ body {
 .first-block button {
   margin-top: 30px;
   color: #121212;
-  font-size: 16.5px;
+  font-size: 18px;
   font-family: "FuturaPT", Arial, sans-serif;
   line-height: 1.45;
   font-weight: 600;
@@ -331,28 +334,9 @@ body {
   border-radius: 50%;
   background-color: #1bcf7b;
   position: relative;
-  margin-right: 20px;
-}
-.accordion-block .accordion-wrapper .wrapper .circle:hover{
-  background-color: #fcee21;
 }
 .accordion-block .accordion-wrapper .wrapper .circle .active {
   color: #fcee21;
-}
-.plus {
-  position: absolute;
-  left: -4px;
-  top: -4px;
-  width:50px;
-  height:50px;
-
-  background:
-          linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
-          linear-gradient(#000000, rgb(0, 0, 0)),
-          rgba(255, 231, 231, 0);
-  background-position:center;
-  background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
-  background-repeat:no-repeat;
 }
 .accordion-block .accordion-wrapper .accordion-section {
   margin-top: 3px;
@@ -382,113 +366,90 @@ body {
   color: #000;
 }
 
-
-
-
-
-.calculator-block{
-  padding: 10px;
-  margin-top: 150px;
+.partners {
+  padding: 100px 0;
 }
-.rangeslider {
-  display: inline-block;
-  width: 70%;
+.partners .title {
+  text-align: center;
 }
-.add {
-  font-size: 22px;
-  background: #1bcf7b;
-  color: white;
+.partners .title h2 {
+  margin-bottom: 125px;
+  font-size: 52px;
+  font-family: "FuturaPT";
+  font-weight: 600;
+  color: #000;
+  line-height: 1.23;
+}
+.partners .title h2 span {
+  color: #1bcf7b;
+}
+.partners-flex__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.partners-flex__wrapper .flex__item {
+  width: 350px;
+  height: 170px;
+  text-align: center;
+}
+.partners-flex__wrapper .flex__item img {
+  max-width: 350px;
+  max-height: 140px;
+}
+.partners .btn {
+  text-align: center;
+}
+.partners .btn button {
+  padding: 0 60px;
   border-radius: 30px;
-  width: 80px;
-  float: right;
-  margin-top: 0px;
-  margin-right: 80px;
-  text-align:center;
+  height: 60px;
 }
 
-.val1.add {
-  background-color: #fcee21;
+.footer {
+  background-color: #01F2A1;
+  padding: 20px 0;
 }
-.val1.add::before {
-  content:" ";
+.footer .flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.ranges { width: 70%; padding-bottom:30px; }
-.range-center {
-  margin-top:-5px;
-  margin-bottom:5px;
-  /* border-top: 1px solid #999; */
-  height: 4px;
-
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+0,8f0222+48,ffffff+100 */
-  background: rgb(252, 238, 33); /* Old browsers */
-  background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgb(27, 207, 123) 48%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(0%,rgba(255,255,255,1)), color-stop(48%, rgb(27, 207, 123)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%, rgb(27, 207, 123) 48%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%, rgb(27, 207, 123) 48%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%, rgb(27, 207, 123) 48%,rgba(255,255,255,1) 100%); /* IE10+ */
-  background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%, rgb(27, 207, 123) 48%,rgba(255,255,255,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
-
-
-
-
+.footer .flex-wrapper__item .logo img {
+  width: 230px;
+  height: 50px;
 }
-.range-left {
-  margin-top:5px;
-  float: left;
-  font-size: 10px;
+.footer .flex-wrapper__item .contacts-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-.range-right {
-  margin-top:-5px;
-  float: right;
-  font-size: 10px;
+.footer .flex-wrapper__item .contacts-flex__item {
+  color: #000000;
+  font-size: 14px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 700;
 }
-
-
-.title {
-  padding-top: 5px;
-  font-weight: bold;
+.footer .flex-wrapper__item .contacts-flex a {
+  text-decoration: underline;
+  color: #ff8562;
 }
-.description {
-  font-size:0.7em;
-  padding-bottom:10px;
-  font-style: italic;
-  color: gray;
-
+.footer .flex-wrapper__item .contacts-flex a .orange {
+  color: #ff8562;
 }
-.box {
-  padding-top: 30px;
-  font-size: 2em;
+.footer .flex-wrapper__item .instagram-block {
+  display: flex;
 }
-
-#total {
-  background: #1bcf7b;
-  color: white;
-  border-radius: 30px;
-  width: 420px;
-  text-align:center;
-  margin-bottom:30px;
+.footer .flex-wrapper__item .instagram-block img {
+  width: 25px;
+  height: 25px;
 }
-#total::before {
-  content: "Total: ";
-}
-.rangeslider__handle {
-  width: 30px;
-  height: 30px;
-}
-.rangeslider__fill {
-  height: 10px;
-}
-.rangeslider__handle {
-  width: 30px;
-  height: 30px;
-}
-.rangeslider {
-  height: 10px;
-}
-.rangeslider__fill {
-  background: #A00303;
-}
-.ranges {
-  padding-bottom:20px;
+.footer .flex-wrapper__item .instagram-block .text {
+  color: #000000;
+  font-size: 16px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 600;
 }

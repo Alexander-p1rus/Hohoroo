@@ -17,11 +17,21 @@
         <img src="img/logo.png" alt="">
     </a>
     <div class="menu-list">
-        <div class="menu-list__item">Пакет франшизы</div>
-        <div class="menu-list__item">Отзывы</div>
-        <div class="menu-list__item">Стать партнером</div>
-        <div class="menu-list__item"> СМИ о нас</div>
-        <div class="menu-list__item"><a href="/InformationBase/index.html" target="_blank"> База знаний</a></div>
+        <a href="">
+            <div class="menu-list__item">Пакет франшизы</div>
+        </a>
+        <a href="">
+            <div class="menu-list__item">Отзывы</div>
+        </a>
+        <a href="">
+            <div class="menu-list__item">Стать партнером</div>
+        </a>
+        <a href="">
+            <div class="menu-list__item"> СМИ о нас</div>
+        </a>
+        <a href="">
+            <div class="menu-list__item"><a href="/InformationBase/index.html" target="_blank"> База знаний</a></div>
+        </a>
     </div>
     <form type="text">
         <button class="btn">8 (800) 234 59 77</button>
@@ -116,339 +126,339 @@
 </section>
 <!-- /.second-block -->
 <section class="calculator-block">
-<div class="container">
-    <script>
-        $(function() {
-            var $document = $(document),
-                $inputRange = $('input[type="range"]');
+    <div class="container">
+        <script>
+            $(function () {
+                var $document = $(document),
+                    $inputRange = $('input[type="range"]');
 
-            // Example functionality to demonstrate a value feedback
-            function valueOutput(element) {
-                var value = element.value,
-                    output = element.parentNode.getElementsByTagName('output')[0];
-                output.innerHTML = value;
-            }
-            for (var i = $inputRange.length - 1; i >= 0; i--) {
-                valueOutput($inputRange[i]);
-            };
-            $document.on('input', 'input[type="range"]', function(e) {
-                valueOutput(e.target);
-            });
-            $inputRange.rangeslider({
-                polyfill: false
-            });
-        });
-
-        /*
-         Price Calculator v.0.3
-         Coded by Ahmet Basar
-         6/24/2015 8:03:46 AM :)
-        */
-
-        $("body").change( function() {
-            // desktop var.
-            var years = $('.val1').html();
-            var examCost = $('.val2').html();
-            var glassesCost = $('.val3').html();
-            var lensCost = $('.val4').html();
-            var solutionCost = $('.val5').html();
-
-            // mobile var.
-            var myears = $('.mval1').html();
-            var mexamCost = $('.mval2').html();
-            var mglassesCost = $('.mval3').html();
-            var mlensCost = $('.mval4').html();
-            var msolutionCost = $('.mval5').html();
-
-            // desktop
-            var totalprice = ((parseInt(examCost) + parseInt(glassesCost) + parseInt(lensCost) + parseInt(solutionCost)) * parseInt(years));
-
-            // mobile
-            var mtotalprice = ((parseInt(mexamCost) + parseInt(mglassesCost) + parseInt(mlensCost) + parseInt(msolutionCost)) * parseInt(myears));
-
-            // desktop - mobile together.
-            $(document).ready(function () {
-                $("#total").html(totalprice).formatCurrency();
-                $("#totalmobile").html(mtotalprice).formatCurrency();
-            });
-
-
-        });
-
-        (function($) {
-
-            $.formatCurrency = {};
-
-            $.formatCurrency.regions = [];
-
-            // default Region is en
-            $.formatCurrency.regions[''] = {
-                symbol: '$',
-                positiveFormat: '%s%n',
-                negativeFormat: '(%s%n)',
-                decimalSymbol: '.',
-                digitGroupSymbol: ',',
-                groupDigits: true
-            };
-
-            $.fn.formatCurrency = function(destination, settings) {
-
-                if (arguments.length == 1 && typeof destination !== "string") {
-                    settings = destination;
-                    destination = false;
+                // Example functionality to demonstrate a value feedback
+                function valueOutput(element) {
+                    var value = element.value,
+                        output = element.parentNode.getElementsByTagName('output')[0];
+                    output.innerHTML = value;
                 }
 
-                // initialize defaults
-                var defaults = {
-                    name: "formatCurrency",
-                    colorize: false,
-                    region: '',
-                    global: true,
-                    roundToDecimalPlace: 2, // roundToDecimalPlace: -1; for no rounding; 0 to round to the dollar; 1 for one digit cents; 2 for two digit cents; 3 for three digit cents; ...
-                    eventOnDecimalsEntered: false
+                for (var i = $inputRange.length - 1; i >= 0; i--) {
+                    valueOutput($inputRange[i]);
+                }
+                ;
+                $document.on('input', 'input[type="range"]', function (e) {
+                    valueOutput(e.target);
+                });
+                $inputRange.rangeslider({
+                    polyfill: false
+                });
+            });
+
+            /*
+             Price Calculator v.0.3
+             Coded by Ahmet Basar
+             6/24/2015 8:03:46 AM :)
+            */
+
+            $("body").change(function () {
+                // desktop var.
+                var years = $('.val1').html();
+                var examCost = $('.val2').html();
+                var glassesCost = $('.val3').html();
+                var lensCost = $('.val4').html();
+                var solutionCost = $('.val5').html();
+
+                // mobile var.
+                var myears = $('.mval1').html();
+                var mexamCost = $('.mval2').html();
+                var mglassesCost = $('.mval3').html();
+                var mlensCost = $('.mval4').html();
+                var msolutionCost = $('.mval5').html();
+
+                // desktop
+                var totalprice = ((parseInt(examCost) + parseInt(glassesCost) + parseInt(lensCost) + parseInt(solutionCost)) * parseInt(years));
+
+                // mobile
+                var mtotalprice = ((parseInt(mexamCost) + parseInt(mglassesCost) + parseInt(mlensCost) + parseInt(msolutionCost)) * parseInt(myears));
+
+                // desktop - mobile together.
+                $(document).ready(function () {
+                    $("#total").html(totalprice).formatCurrency();
+                    $("#totalmobile").html(mtotalprice).formatCurrency();
+                });
+
+
+            });
+
+            (function ($) {
+
+                $.formatCurrency = {};
+
+                $.formatCurrency.regions = [];
+
+                // default Region is en
+                $.formatCurrency.regions[''] = {
+                    symbol: '$',
+                    positiveFormat: '%s%n',
+                    negativeFormat: '(%s%n)',
+                    decimalSymbol: '.',
+                    digitGroupSymbol: ',',
+                    groupDigits: true
                 };
-                // initialize default region
-                defaults = $.extend(defaults, $.formatCurrency.regions['']);
-                // override defaults with settings passed in
-                settings = $.extend(defaults, settings);
 
-                // check for region setting
-                if (settings.region.length > 0) {
-                    settings = $.extend(settings, getRegionOrCulture(settings.region));
-                }
-                settings.regex = generateRegex(settings);
+                $.fn.formatCurrency = function (destination, settings) {
 
-                return this.each(function() {
-                    $this = $(this);
-
-                    // get number
-                    var num = '0';
-                    num = $this[$this.is('input, select, textarea') ? 'val' : 'html']();
-
-                    //identify '(123)' as a negative number
-                    if (num.search('\\(') >= 0) {
-                        num = '-' + num;
+                    if (arguments.length == 1 && typeof destination !== "string") {
+                        settings = destination;
+                        destination = false;
                     }
 
-                    if (num === '' || (num === '-' && settings.roundToDecimalPlace === -1)) {
-                        return;
-                    }
+                    // initialize defaults
+                    var defaults = {
+                        name: "formatCurrency",
+                        colorize: false,
+                        region: '',
+                        global: true,
+                        roundToDecimalPlace: 2, // roundToDecimalPlace: -1; for no rounding; 0 to round to the dollar; 1 for one digit cents; 2 for two digit cents; 3 for three digit cents; ...
+                        eventOnDecimalsEntered: false
+                    };
+                    // initialize default region
+                    defaults = $.extend(defaults, $.formatCurrency.regions['']);
+                    // override defaults with settings passed in
+                    settings = $.extend(defaults, settings);
 
-                    // if the number is valid use it, otherwise clean it
-                    if (isNaN(num)) {
-                        // clean number
-                        num = num.replace(settings.regex, '');
+                    // check for region setting
+                    if (settings.region.length > 0) {
+                        settings = $.extend(settings, getRegionOrCulture(settings.region));
+                    }
+                    settings.regex = generateRegex(settings);
+
+                    return this.each(function () {
+                        $this = $(this);
+
+                        // get number
+                        var num = '0';
+                        num = $this[$this.is('input, select, textarea') ? 'val' : 'html']();
+
+                        //identify '(123)' as a negative number
+                        if (num.search('\\(') >= 0) {
+                            num = '-' + num;
+                        }
 
                         if (num === '' || (num === '-' && settings.roundToDecimalPlace === -1)) {
                             return;
                         }
 
-                        if (settings.decimalSymbol != '.') {
-                            num = num.replace(settings.decimalSymbol, '.');  // reset to US decimal for arithmetic
-                        }
+                        // if the number is valid use it, otherwise clean it
                         if (isNaN(num)) {
-                            num = '0';
+                            // clean number
+                            num = num.replace(settings.regex, '');
+
+                            if (num === '' || (num === '-' && settings.roundToDecimalPlace === -1)) {
+                                return;
+                            }
+
+                            if (settings.decimalSymbol != '.') {
+                                num = num.replace(settings.decimalSymbol, '.');  // reset to US decimal for arithmetic
+                            }
+                            if (isNaN(num)) {
+                                num = '0';
+                            }
                         }
-                    }
 
-                    // evalutate number input
-                    var numParts = String(num).split('.');
-                    var isPositive = (num == Math.abs(num));
-                    var hasDecimals = (numParts.length > 1);
-                    var decimals = (hasDecimals ? numParts[1].toString() : '0');
-                    var originalDecimals = decimals;
+                        // evalutate number input
+                        var numParts = String(num).split('.');
+                        var isPositive = (num == Math.abs(num));
+                        var hasDecimals = (numParts.length > 1);
+                        var decimals = (hasDecimals ? numParts[1].toString() : '0');
+                        var originalDecimals = decimals;
 
-                    // format number
-                    num = Math.abs(numParts[0]);
-                    num = isNaN(num) ? 0 : num;
-                    if (settings.roundToDecimalPlace >= 0) {
-                        decimals = parseFloat('1.' + decimals); // prepend "0."; (IE does NOT round 0.50.toFixed(0) up, but (1+0.50).toFixed(0)-1
-                        decimals = decimals.toFixed(settings.roundToDecimalPlace); // round
-                        if (decimals.substring(0, 1) == '2') {
-                            num = Number(num) + 1;
+                        // format number
+                        num = Math.abs(numParts[0]);
+                        num = isNaN(num) ? 0 : num;
+                        if (settings.roundToDecimalPlace >= 0) {
+                            decimals = parseFloat('1.' + decimals); // prepend "0."; (IE does NOT round 0.50.toFixed(0) up, but (1+0.50).toFixed(0)-1
+                            decimals = decimals.toFixed(settings.roundToDecimalPlace); // round
+                            if (decimals.substring(0, 1) == '2') {
+                                num = Number(num) + 1;
+                            }
+                            decimals = decimals.substring(2); // remove "0."
                         }
-                        decimals = decimals.substring(2); // remove "0."
-                    }
-                    num = String(num);
+                        num = String(num);
 
-                    if (settings.groupDigits) {
-                        for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++) {
-                            num = num.substring(0, num.length - (4 * i + 3)) + settings.digitGroupSymbol + num.substring(num.length - (4 * i + 3));
+                        if (settings.groupDigits) {
+                            for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++) {
+                                num = num.substring(0, num.length - (4 * i + 3)) + settings.digitGroupSymbol + num.substring(num.length - (4 * i + 3));
+                            }
                         }
+
+                        if ((hasDecimals && settings.roundToDecimalPlace == -1) || settings.roundToDecimalPlace > 0) {
+                            num += settings.decimalSymbol + decimals;
+                        }
+
+                        // format symbol/negative
+                        var format = isPositive ? settings.positiveFormat : settings.negativeFormat;
+                        var money = format.replace(/%s/g, settings.symbol);
+                        money = money.replace(/%n/g, num);
+
+                        // setup destination
+                        var $destination = $([]);
+                        if (!destination) {
+                            $destination = $this;
+                        } else {
+                            $destination = $(destination);
+                        }
+                        // set destination
+                        $destination[$destination.is('input, select, textarea') ? 'val' : 'html'](money);
+
+                        if (
+                            hasDecimals &&
+                            settings.eventOnDecimalsEntered &&
+                            originalDecimals.length > settings.roundToDecimalPlace
+                        ) {
+                            $destination.trigger('decimalsEntered', originalDecimals);
+                        }
+
+                        // colorize
+                        if (settings.colorize) {
+                            $destination.css('color', isPositive ? 'black' : 'red');
+                        }
+                    });
+                };
+
+                // Remove all non numbers from text
+                $.fn.toNumber = function (settings) {
+                    var defaults = $.extend({
+                        name: "toNumber",
+                        region: '',
+                        global: true
+                    }, $.formatCurrency.regions['']);
+
+                    settings = jQuery.extend(defaults, settings);
+                    if (settings.region.length > 0) {
+                        settings = $.extend(settings, getRegionOrCulture(settings.region));
                     }
+                    settings.regex = generateRegex(settings);
 
-                    if ((hasDecimals && settings.roundToDecimalPlace == -1) || settings.roundToDecimalPlace > 0) {
-                        num += settings.decimalSymbol + decimals;
+                    return this.each(function () {
+                        var method = $(this).is('input, select, textarea') ? 'val' : 'html';
+                        $(this)[method]($(this)[method]().replace('(', '(-').replace(settings.regex, ''));
+                    });
+                };
+
+                // returns the value from the first element as a number
+                $.fn.asNumber = function (settings) {
+                    var defaults = $.extend({
+                        name: "asNumber",
+                        region: '',
+                        parse: true,
+                        parseType: 'Float',
+                        global: true
+                    }, $.formatCurrency.regions['']);
+                    settings = jQuery.extend(defaults, settings);
+                    if (settings.region.length > 0) {
+                        settings = $.extend(settings, getRegionOrCulture(settings.region));
                     }
+                    settings.regex = generateRegex(settings);
+                    settings.parseType = validateParseType(settings.parseType);
 
-                    // format symbol/negative
-                    var format = isPositive ? settings.positiveFormat : settings.negativeFormat;
-                    var money = format.replace(/%s/g, settings.symbol);
-                    money = money.replace(/%n/g, num);
-
-                    // setup destination
-                    var $destination = $([]);
-                    if (!destination) {
-                        $destination = $this;
-                    } else {
-                        $destination = $(destination);
-                    }
-                    // set destination
-                    $destination[$destination.is('input, select, textarea') ? 'val' : 'html'](money);
-
-                    if (
-                        hasDecimals &&
-                        settings.eventOnDecimalsEntered &&
-                        originalDecimals.length > settings.roundToDecimalPlace
-                    ) {
-                        $destination.trigger('decimalsEntered', originalDecimals);
-                    }
-
-                    // colorize
-                    if (settings.colorize) {
-                        $destination.css('color', isPositive ? 'black' : 'red');
-                    }
-                });
-            };
-
-            // Remove all non numbers from text
-            $.fn.toNumber = function(settings) {
-                var defaults = $.extend({
-                    name: "toNumber",
-                    region: '',
-                    global: true
-                }, $.formatCurrency.regions['']);
-
-                settings = jQuery.extend(defaults, settings);
-                if (settings.region.length > 0) {
-                    settings = $.extend(settings, getRegionOrCulture(settings.region));
-                }
-                settings.regex = generateRegex(settings);
-
-                return this.each(function() {
                     var method = $(this).is('input, select, textarea') ? 'val' : 'html';
-                    $(this)[method]($(this)[method]().replace('(', '(-').replace(settings.regex, ''));
-                });
-            };
+                    var num = $(this)[method]();
+                    num = num ? num : "";
+                    num = num.replace('(', '(-');
+                    num = num.replace(settings.regex, '');
+                    if (!settings.parse) {
+                        return num;
+                    }
 
-            // returns the value from the first element as a number
-            $.fn.asNumber = function(settings) {
-                var defaults = $.extend({
-                    name: "asNumber",
-                    region: '',
-                    parse: true,
-                    parseType: 'Float',
-                    global: true
-                }, $.formatCurrency.regions['']);
-                settings = jQuery.extend(defaults, settings);
-                if (settings.region.length > 0) {
-                    settings = $.extend(settings, getRegionOrCulture(settings.region));
-                }
-                settings.regex = generateRegex(settings);
-                settings.parseType = validateParseType(settings.parseType);
+                    if (num.length == 0) {
+                        num = '0';
+                    }
 
-                var method = $(this).is('input, select, textarea') ? 'val' : 'html';
-                var num = $(this)[method]();
-                num = num ? num : "";
-                num = num.replace('(', '(-');
-                num = num.replace(settings.regex, '');
-                if (!settings.parse) {
-                    return num;
-                }
+                    if (settings.decimalSymbol != '.') {
+                        num = num.replace(settings.decimalSymbol, '.');  // reset to US decimal for arthmetic
+                    }
 
-                if (num.length == 0) {
-                    num = '0';
-                }
+                    return window['parse' + settings.parseType](num);
+                };
 
-                if (settings.decimalSymbol != '.') {
-                    num = num.replace(settings.decimalSymbol, '.');  // reset to US decimal for arthmetic
+                function getRegionOrCulture(region) {
+                    var regionInfo = $.formatCurrency.regions[region];
+                    if (regionInfo) {
+                        return regionInfo;
+                    } else {
+                        if (/(\w+)-(\w+)/g.test(region)) {
+                            var culture = region.replace(/(\w+)-(\w+)/g, "$1");
+                            return $.formatCurrency.regions[culture];
+                        }
+                    }
+                    // fallback to extend(null) (i.e. nothing)
+                    return null;
                 }
 
-                return window['parse' + settings.parseType](num);
-            };
-
-            function getRegionOrCulture(region) {
-                var regionInfo = $.formatCurrency.regions[region];
-                if (regionInfo) {
-                    return regionInfo;
-                }
-                else {
-                    if (/(\w+)-(\w+)/g.test(region)) {
-                        var culture = region.replace(/(\w+)-(\w+)/g, "$1");
-                        return $.formatCurrency.regions[culture];
+                function validateParseType(parseType) {
+                    switch (parseType.toLowerCase()) {
+                        case 'int':
+                            return 'Int';
+                        case 'float':
+                            return 'Float';
+                        default:
+                            throw 'invalid parseType';
                     }
                 }
-                // fallback to extend(null) (i.e. nothing)
-                return null;
-            }
 
-            function validateParseType(parseType) {
-                switch (parseType.toLowerCase()) {
-                    case 'int':
-                        return 'Int';
-                    case 'float':
-                        return 'Float';
-                    default:
-                        throw 'invalid parseType';
+                function generateRegex(settings) {
+                    if (settings.symbol === '') {
+                        return new RegExp("[^\\d" + settings.decimalSymbol + "-]", "g");
+                    } else {
+                        var symbol = settings.symbol.replace('$', '\\$').replace('.', '\\.');
+                        return new RegExp(symbol + "|[^\\d" + settings.decimalSymbol + "-]", "g");
+                    }
                 }
-            }
 
-            function generateRegex(settings) {
-                if (settings.symbol === '') {
-                    return new RegExp("[^\\d" + settings.decimalSymbol + "-]", "g");
-                }
-                else {
-                    var symbol = settings.symbol.replace('$', '\\$').replace('.', '\\.');
-                    return new RegExp(symbol + "|[^\\d" + settings.decimalSymbol + "-]", "g");
-                }
-            }
+            })(jQuery);
 
-        })(jQuery);
+        </script>
 
-    </script>
+        <h1>Калькулятор прибыли</h1>
 
-    <h1>Калькулятор прибыли</h1>
+        <div>
+            <div class="title">Количество проданных стаканов</div>
+            <div class="description">Средняя цена напитка</div>
+            <input type="range" min="5" max="100" step="1" value="50">
+            <output class="val1 add"></output>
+            <div class="ranges">
+                <div class="range-left">5</div>
+                <div class="range-center"></div>
+                <div class="range-right">100</div>
+            </div>
+        </div>
 
-    <div>
-        <div class="title">Количество проданных стаканов</div>
-        <div class="description">Средняя цена напитка</div>
-        <input type="range" min="5" max="100" step="1" value="50">
-        <output class="val1 add"></output>
-        <div class="ranges">
-            <div class="range-left">5</div>
-            <div class="range-center"></div>
-            <div class="range-right">100</div>
+        <div>
+            <div class="title">Арендная ставка</div>
+            <div class="description">lorem ipsum dolor sit amet</div>
+            <input type="range" min="50" max="250" step="1" value="75">
+            <output class="val2 add"></output>
+            <div class="ranges">
+                <div class="range-left">50</div>
+                <div class="range-center"></div>
+                <div class="range-right">250</div>
+            </div>
+        </div>
+
+        <div>
+            <div class="title">Средняя ценка напитка</div>
+            <div class="description">lorem ipsum dolor sit amet</div>
+            <input type="range" min="100" max="2000" step="1" value="200">
+            <output class="val3 add"></output>
+            <div class="ranges">
+                <div class="range-left">100</div>
+                <div class="range-center"></div>
+                <div class="range-right">2000</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div id="total"></div>
         </div>
     </div>
-
-    <div>
-        <div class="title">Арендная ставка</div>
-        <div class="description">lorem ipsum dolor sit amet</div>
-        <input type="range" min="50" max="250" step="1" value="75">
-        <output class="val2 add"></output>
-        <div class="ranges">
-            <div class="range-left">50</div>
-            <div class="range-center"></div>
-            <div class="range-right">250</div>
-        </div>
-    </div>
-
-    <div>
-        <div class="title">Средняя ценка напитка</div>
-        <div class="description">lorem ipsum dolor sit amet</div>
-        <input type="range" min="100" max="2000" step="1" value="200">
-        <output class="val3 add"></output>
-        <div class="ranges">
-            <div class="range-left">100</div>
-            <div class="range-center"></div>
-            <div class="range-right">2000</div>
-        </div>
-    </div>
-
-    <div class="box">
-        <div id="total" ></div>
-    </div>
-</div>
 
 </section>
 <section class="third-block">
@@ -591,9 +601,11 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Санкт-Петербург</div>
-                        <div class="circle"><div class="circle">
-                            <div class="plus"></div>
-                        </div></div>
+                        <div class="circle">
+                            <div class="circle">
+                                <div class="plus"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -714,9 +726,11 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Ижевск</div>
-                        <div class="circle"><div class="circle">
-                            <div class="plus"></div>
-                        </div></div>
+                        <div class="circle">
+                            <div class="circle">
+                                <div class="plus"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -746,7 +760,9 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Йошкар-Ола</div>
-                        <div class="circle"><div class="plus"></div></div>
+                        <div class="circle">
+                            <div class="plus"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -774,7 +790,9 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Альметьевск</div>
-                        <div class="circle"><div class="plus"></div></div>
+                        <div class="circle">
+                            <div class="plus"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -841,11 +859,15 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Уфа</div>
-                        <div class="circle"><div class="circle">
-                            <div class="plus"><div class="circle">
-                                <div class="plus"></div>
-                            </div></div>
-                        </div></div>
+                        <div class="circle">
+                            <div class="circle">
+                                <div class="plus">
+                                    <div class="circle">
+                                        <div class="plus"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -869,9 +891,11 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Зеленодольск</div>
-                        <div class="circle"><div class="circle">
-                            <div class="plus"></div>
-                        </div></div>
+                        <div class="circle">
+                            <div class="circle">
+                                <div class="plus"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -891,9 +915,11 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Киров</div>
-                        <div class="circle"><div class="circle">
-                            <div class="plus"></div>
-                        </div></div>
+                        <div class="circle">
+                            <div class="circle">
+                                <div class="plus"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -914,9 +940,11 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Нижний Новгород</div>
-                        <div class="circle"><div class="circle">
-                            <div class="plus"></div>
-                        </div></div>
+                        <div class="circle">
+                            <div class="circle">
+                                <div class="plus"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -937,9 +965,11 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Воронеж</div>
-                        <div class="circle"><div class="circle">
-                            <div class="plus"></div>
-                        </div></div>
+                        <div class="circle">
+                            <div class="circle">
+                                <div class="plus"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -958,9 +988,11 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Красноярск</div>
-                        <div class="circle"><div class="circle">
-                            <div class="plus"></div>
-                        </div></div>
+                        <div class="circle">
+                            <div class="circle">
+                                <div class="plus"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -979,9 +1011,11 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Тюмень</div>
-                        <div class="circle"><div class="circle">
-                            <div class="plus"></div>
-                        </div></div>
+                        <div class="circle">
+                            <div class="circle">
+                                <div class="plus"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -999,9 +1033,11 @@
                 <div class="accordion-header">
                     <div class="wrapper">
                         <div class="town">Менделеевск</div>
-                        <div class="circle"><div class="circle">
-                            <div class="plus"></div>
-                        </div></div>
+                        <div class="circle">
+                            <div class="circle">
+                                <div class="plus"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-body">
@@ -1023,6 +1059,101 @@
     </div>
 </section>
 <!-- /.accordion -->
+
+<section class="partners">
+    <div class="container">
+        <div class="title">
+            <h2>
+                Наши <span>крупные партнёры</span>
+            </h2>
+        </div>
+        <div class="partners-flex__wrapper">
+            <div class="flex__item">
+                <img src="img/partners/bilayne.webp" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/sberbank.png" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/gorpech.webp" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/pyaterochka.webp" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/magnit.png" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/perekrestok.webp" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/alex-fitness.png" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/metro-fintess.svg" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/planet-fitness.webp" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/rostelecom.png" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/tattelecom.png" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/petrovich.webp" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/fintes-house.gif" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/karat.webp" alt="">
+            </div>
+            <div class="flex__item">
+                <img src="img/partners/INDI.webp" alt="">
+            </div>
+        </div>
+        <div class="btn">
+            <form action="">
+                <button>Стать партнером</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="flex-wrapper">
+            <div class="flex-wrapper__item">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+            </div>
+            <div class="flex-wrapper__item">
+                <div class="contacts-flex">
+                    <div class="contacts-flex__item">ИП Шамсутдинов Ильнар Ришатович</div>
+                    <div class="contacts-flex__item">Казань, Декабристов, 85Б</div>
+                    <div class="contacts-flex__item">ИНН 163603876644</div>
+                    <div class="contacts-flex__item">ОГРНИП 320169000017512</div>
+                    <a target="_blank" href="https://hohoro.ru/politika">
+                        <div class="contacts-flex__item orange">Политика конфиденциальности</div>
+                    </a>
+                    <div class="contacts-flex__item">Тел: 8(800) 234 59 77</div>
+                </div>
+            </div>
+            <div class="flex-wrapper__item">
+                <div class="instagram-block">
+                    <div class="text">Мы в Instagram:</div>
+                    <a target="_blank" href="https://www.instagram.com/hohoro_coffee/"><img src="img/instagram.svg"
+                                                                                            alt="instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /.footer -->
+
 
 <script src="js/index.js"></script>
 </body>
