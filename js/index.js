@@ -9,7 +9,7 @@ accordion=(e)=>{
         e.target.closest('.accordion-section').querySelector('.accordion-body').style.maxHeight="0px"
     }else{
         e.target.closest('.accordion-section').classList.add('opened')
-        e.target.closest('.accordion-section').querySelector('.accordion-body').style.maxHeight = height + 40+'px'
+        e.target.closest('.accordion-section').querySelector('.accordion-body').style.maxHeight = height + 100+'px'
     }
 }
 
