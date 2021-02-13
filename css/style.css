@@ -1,4 +1,4 @@
-.partners .btn button, .founder-block .pattern button, .video-block .wrapper button, .business-block-advantages .flex-wrapper__item button, .first-block button, .menu button {
+.partners .btn button, .history-block button, .founder-block .pattern button, .video-block .wrapper button, .business-block-advantages .flex-wrapper__item button, .first-block button, .menu button {
   color: #171717;
   background-color: #fcee21;
   height: 40px;
@@ -443,6 +443,184 @@ body {
   width: 230px;
   height: 400px;
   text-align: center;
+}
+
+.location-help-block {
+  padding: 120px 0;
+}
+.location-help-block .title h3 {
+  color: #000000;
+  font-size: 46px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+.location-help-block .title h3 span {
+  color: #4cf2a2;
+}
+.location-help-block .subtitle {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 300;
+  font-family: "FuturaPT";
+  text-align: center;
+  margin-top: 40px;
+}
+.location-help-block .flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+.location-help-block .flex-wrapper__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.location-help-block .flex-wrapper__item img {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+.location-help-block .flex-wrapper__item .subtext {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "FuturaPT";
+  line-height: 1.35;
+}
+
+.slider-block {
+  margin-top: 150px;
+  max-width: 100%;
+  position: relative;
+}
+.slider-block .title {
+  margin-bottom: 190px;
+}
+.slider-block .title h3 {
+  color: #000000;
+  font-size: 46px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+.slider-block .title h3 span {
+  color: #4cf2a2;
+}
+.slider-block .slideshow-container {
+  left: 5%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.slider-block img {
+  width: 907px;
+  height: 540px;
+}
+.slider-block .slideshow-container {
+  position: relative;
+}
+.slider-block .prev {
+  left: -7%;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  font-size: 25px;
+  transition: 0.6s ease;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #4cf2a2;
+  border-radius: 50%;
+}
+.slider-block .arrow {
+  position: absolute;
+  width: auto;
+  width: 11px;
+  height: 11px;
+  cursor: pointer;
+  top: 15%;
+  left: 30%;
+}
+.slider-block .arrow2 {
+  position: absolute;
+  width: auto;
+  width: 11px;
+  height: 11px;
+  cursor: pointer;
+  top: 15%;
+  left: 30%;
+}
+.slider-block .next {
+  right: 8%;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  font-size: 25px;
+  transition: 0.6s ease;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #4cf2a2;
+  border-radius: 50%;
+}
+.slider-block .dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.slider-block .dot:hover {
+  background-color: #717171;
+}
+.slider-block .active {
+  background-color: #717171;
+}
+
+.history-block {
+  background-image: url("../img/bgHistory.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 33%;
+  padding: 70px 0;
+}
+.history-block .title {
+  text-align: center;
+}
+.history-block .title h3 {
+  margin-bottom: 125px;
+  font-size: 52px;
+  font-family: "FuturaPT";
+  font-weight: 600;
+  color: #000;
+  line-height: 1.23;
+}
+.history-block .title h3 span {
+  color: #1bcf7b;
+}
+.history-block .flex-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.history-block button {
+  display: block;
+  margin: 50px auto 0 auto;
+  font-size: 16px;
+  height: 60px;
+  border-radius: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-weight: 800;
+  font-family: "FuturaPT";
+  width: 250px;
 }
 
 .partners {
