@@ -1,4 +1,4 @@
-.partners .btn button, .garants-block .main-block .main-content .btn button, .history-block button, .founder-block .pattern button, .video-block .wrapper button, .business-block-advantages .flex-wrapper__item button, .first-block button, .menu button {
+.partners .btn button, .Hohoro-info-block .instruction .btn button, .garants-block .main-block .main-content .btn button, .history-block button, .founder-block .pattern button, .video-block .wrapper button, .business-block-advantages .flex-wrapper__item button, .first-block button, .menu button {
   color: #171717;
   background-color: #fcee21;
   height: 40px;
@@ -783,6 +783,7 @@ body {
 }
 
 .price-info-block {
+  margin-top: 75px;
   position: relative;
 }
 .price-info-block .title h3 {
@@ -896,6 +897,155 @@ body {
 }
 .price-info-block .flex-wrapper__item .list .yellow:before {
   content: "";
+}
+
+.Hohoro-info-block {
+  width: 100%;
+  margin-top: 80px;
+  position: relative;
+  height: 600px;
+  display: flex;
+}
+.Hohoro-info-block .polygon {
+  display: inline-block;
+  position: absolute;
+  width: 60%;
+  -webkit-clip-path: polygon(0 0, 66% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 66% 0, 100% 100%, 0% 100%);
+  background-color: #4cf2a2;
+  height: 100%;
+}
+.Hohoro-info-block .polygon .hohoro-machine {
+  position: relative;
+  height: 100%;
+}
+.Hohoro-info-block .polygon .hohoro-machine .title {
+  color: #ffffff;
+  font-size: 46px;
+  font-family: "FuturaPT";
+  line-height: 1.55;
+  font-weight: 700;
+  position: absolute;
+  left: 35%;
+  top: 4%;
+}
+.Hohoro-info-block .polygon .hohoro-machine .img {
+  position: absolute;
+  left: 46%;
+  bottom: 7%;
+}
+.Hohoro-info-block .polygon .hohoro-machine .img img {
+  width: 200px;
+  height: 380px;
+}
+.Hohoro-info-block .instruction {
+  position: relative;
+  left: 50%;
+  width: 45%;
+}
+.Hohoro-info-block .instruction__item1 {
+  top: 10%;
+  left: -2%;
+  position: absolute;
+  color: #242424;
+  font-size: 27px;
+  font-family: "FuturaPT";
+  line-height: 1.55;
+  font-weight: 600;
+}
+.Hohoro-info-block .instruction__item2 {
+  top: 26%;
+  left: 7%;
+  position: absolute;
+  color: #242424;
+  font-size: 27px;
+  font-family: "FuturaPT";
+  line-height: 1.55;
+  font-weight: 600;
+}
+.Hohoro-info-block .instruction__item3 {
+  top: 43%;
+  left: 15%;
+  position: absolute;
+  color: #242424;
+  font-size: 27px;
+  font-family: "FuturaPT";
+  line-height: 1.55;
+  font-weight: 600;
+}
+.Hohoro-info-block .instruction__item4 {
+  top: 60%;
+  left: 24%;
+  position: absolute;
+  color: #242424;
+  font-size: 27px;
+  font-family: "FuturaPT";
+  line-height: 1.55;
+  font-weight: 600;
+}
+.Hohoro-info-block .instruction span {
+  letter-spacing: 10px;
+  color: #4cf2a2;
+  font-size: 46px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 700;
+}
+.Hohoro-info-block .instruction .btn {
+  position: absolute;
+  top: 76%;
+  left: 25%;
+}
+.Hohoro-info-block .instruction .btn button {
+  width: 260px;
+  height: 55px;
+}
+
+.achievement-block .sertificate {
+  margin-top: 65px;
+  text-align: center;
+}
+.achievement-block .sertificate img {
+  width: 900px;
+  height: 600px;
+}
+.achievement-block .line {
+  width: 133px;
+  height: 1px;
+  background-color: black;
+  margin: 35px auto 0 auto;
+}
+.achievement-block .title {
+  margin-top: 46px;
+}
+.achievement-block .title h3 {
+  color: #000000;
+  font-size: 46px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 700;
+  text-align: center;
+}
+.achievement-block .title h3 span {
+  color: #4cf2a2;
+}
+.achievement-block .diploma {
+  margin-top: 140px;
+  text-align: center;
+}
+.achievement-block .diploma img {
+  width: 620px;
+  height: 930px;
+}
+.achievement-block .subtext {
+  max-width: 590px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 81px;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "FuturaPT";
+  line-height: 1.55;
 }
 
 .partners {

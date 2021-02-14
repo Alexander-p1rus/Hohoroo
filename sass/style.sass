@@ -705,6 +705,7 @@ body
 
 
 .price-info-block
+  margin-top: 75px
   position: relative
   .title
     h3
@@ -804,6 +805,136 @@ body
             content: ""
             @extend %yellow-square
 
+
+.Hohoro-info-block
+  width: 100%
+  margin-top: 80px
+  position: relative
+  height: 600px
+  display: flex
+  .polygon
+    display: inline-block
+    position: absolute
+    width: 60%
+    clip-path: polygon(0 0, 66% 0, 100% 100%, 0% 100%)
+    background-color: rgb(76, 242, 162)
+    height: 100%
+    .hohoro-machine
+      position: relative
+      height: 100%
+      .title
+        color: #ffffff
+        font-size: 46px
+        font-family: 'FuturaPT'
+        line-height: 1.55
+        font-weight: 700
+        position: absolute
+        left: 35%
+        top: 4%
+      .img
+        position: absolute
+        left: 46%
+        bottom: 7%
+        img
+          width: 200px
+          height: 380px
+  .instruction
+    position: relative
+    left: 50%
+    width: 45%
+    &__item1
+      top: 10%
+      left: -2%
+      position: absolute
+      color: #242424
+      font-size: 27px
+      font-family: 'FuturaPT'
+      line-height: 1.55
+      font-weight: 600
+    &__item2
+      top: 26%
+      left: 7%
+      position: absolute
+      color: #242424
+      font-size: 27px
+      font-family: 'FuturaPT'
+      line-height: 1.55
+      font-weight: 600
+    &__item3
+      top: 43%
+      left: 15%
+      position: absolute
+      color: #242424
+      font-size: 27px
+      font-family: 'FuturaPT'
+      line-height: 1.55
+      font-weight: 600
+    &__item4
+      top: 60%
+      left: 24%
+      position: absolute
+      color: #242424
+      font-size: 27px
+      font-family: 'FuturaPT'
+      line-height: 1.55
+      font-weight: 600
+    span
+      letter-spacing: 10px
+      color: #4cf2a2
+      font-size: 46px
+      font-family: 'FuturaPT',Arial,sans-serif
+      line-height: 1.55
+      font-weight: 700
+    .btn
+      position: absolute
+      top: 76%
+      left: 25%
+      button
+        @extend %button
+        width: 260px
+        height: 55px
+
+
+.achievement-block
+  .sertificate
+    margin-top: 65px
+    text-align: center
+    img
+      width: 900px
+      height: 600px
+  .line
+    width: 133px
+    height: 1px
+    background-color: black
+    margin: 35px auto 0 auto
+  .title
+    margin-top: 46px
+    h3
+      color: #000000
+      font-size: 46px
+      font-family: 'FuturaPT',Arial,sans-serif
+      line-height: 1.55
+      font-weight: 700
+      text-align: center
+      span
+        color: rgb(76, 242, 162)
+  .diploma
+    margin-top: 140px
+    text-align: center
+    img
+      width: 620px
+      height: 930px
+  .subtext
+    max-width: 590px
+    margin: 0 auto
+    text-align: center
+    margin-top: 81px
+    font-size: 25px
+    font-weight: 400
+    font-family: 'FuturaPT'
+    line-height: 1.55
+
+
 .partners
   padding: 100px 0
   .title
@@ -836,6 +967,7 @@ body
       padding: 0 60px
       border-radius: 30px
       height: 60px
+
 
 .accordion-simple-block
   h2
