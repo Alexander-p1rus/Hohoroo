@@ -1,4 +1,4 @@
-.partners .btn button, .history-block button, .founder-block .pattern button, .video-block .wrapper button, .business-block-advantages .flex-wrapper__item button, .first-block button, .menu button {
+.partners .btn button, .garants-block .main-block .main-content .btn button, .history-block button, .founder-block .pattern button, .video-block .wrapper button, .business-block-advantages .flex-wrapper__item button, .first-block button, .menu button {
   color: #171717;
   background-color: #fcee21;
   height: 40px;
@@ -10,6 +10,30 @@
   border: none;
   font-weight: bold;
   cursor: pointer;
+}
+
+.price-info-block .flex-wrapper__item .list .gray:before {
+  background-color: #bdbdbd;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.price-info-block .flex-wrapper__item .list .green:before {
+  background-color: #4cf2a2;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.price-info-block .flex-wrapper__item .list .yellow:before {
+  background-color: #fcee21;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin-right: 13px;
 }
 
 .container {
@@ -204,6 +228,9 @@ body {
   margin-top: 190px;
 }
 
+.pattern {
+  margin-bottom: 100px;
+}
 .pattern span {
   color: #1bcf7b;
 }
@@ -493,6 +520,7 @@ body {
 }
 
 .slider-block {
+  margin-bottom: 120px;
   margin-top: 150px;
   max-width: 100%;
   position: relative;
@@ -537,6 +565,10 @@ body {
   background-color: #4cf2a2;
   border-radius: 50%;
 }
+.slider-block .prev:hover {
+  background-color: #fdfd02;
+  transition: background-color 0.4s ease;
+}
 .slider-block .arrow {
   position: absolute;
   width: auto;
@@ -553,7 +585,7 @@ body {
   height: 11px;
   cursor: pointer;
   top: 15%;
-  left: 30%;
+  left: 35%;
 }
 .slider-block .next {
   right: 8%;
@@ -567,6 +599,10 @@ body {
   height: 40px;
   background-color: #4cf2a2;
   border-radius: 50%;
+}
+.slider-block .next:hover {
+  background-color: #fdfd02;
+  transition: background-color 0.4s ease;
 }
 .slider-block .dot {
   cursor: pointer;
@@ -590,7 +626,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 33%;
-  padding: 70px 0;
+  padding: 50px 0;
 }
 .history-block .title {
   text-align: center;
@@ -612,7 +648,7 @@ body {
 }
 .history-block button {
   display: block;
-  margin: 50px auto 0 auto;
+  margin: 70px auto 0 auto;
   font-size: 16px;
   height: 60px;
   border-radius: 40px;
@@ -621,6 +657,245 @@ body {
   font-weight: 800;
   font-family: "FuturaPT";
   width: 250px;
+}
+
+.facts-block {
+  padding: 35px 0;
+}
+.facts-block .title h3 {
+  color: #000000;
+  font-size: 46px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+.facts-block .title h3 span {
+  color: #4cf2a2;
+}
+.facts-block .flex-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.facts-block .flex-wrapper__item {
+  display: flex;
+  margin-top: 20px;
+}
+.facts-block .flex-wrapper__item img {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+.facts-block .flex-wrapper__item .text {
+  color: #000000;
+  font-size: 20px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.garants-block {
+  padding-top: 320px;
+  padding-bottom: 350px;
+  background-image: url("../img/backGRound.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 75% 50%;
+  height: 100%;
+  width: 100%;
+}
+.garants-block .main-block {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-content: start;
+}
+.garants-block .main-block .main-content .title h3 {
+  font-size: 51px;
+  font-family: "FuturaPT";
+  font-weight: 600;
+  color: #000;
+  line-height: 1.23;
+}
+.garants-block .main-block .main-content .text {
+  color: #000000;
+  font-size: 20px;
+  font-family: "FuturaPT", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 500;
+}
+.garants-block .main-block .main-content .btn button {
+  margin-top: 45px;
+  width: 260px;
+  height: 55px;
+}
+.garants-block .main-block .img {
+  display: flex;
+}
+.garants-block .main-block .img .img1 {
+  margin-right: 70px;
+}
+.garants-block .main-block .img .img1 img {
+  width: 250px;
+  height: 370px;
+}
+.garants-block .main-block .img .img2 img {
+  width: 230px;
+  height: 430px;
+}
+
+.proff-escord-block {
+  padding: 100px 0;
+}
+.proff-escord-block .title h3 {
+  color: #000000;
+  font-size: 46px;
+  font-family: "FuturaPT";
+  line-height: 1.55;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+.proff-escord-block .title h3 span {
+  color: #4cf2a2;
+}
+.proff-escord-block .flex-wrapper {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.proff-escord-block .flex-wrapper__item {
+  margin-top: 70px;
+  flex: 0 0 48%;
+}
+.proff-escord-block .flex-wrapper__item img {
+  width: 65px;
+  height: 65px;
+}
+.proff-escord-block .flex-wrapper__item .text {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "FuturaPT";
+  color: #000;
+  margin-top: 20px;
+}
+
+.price-info-block {
+  position: relative;
+}
+.price-info-block .title h3 {
+  color: #000000;
+  font-size: 46px;
+  font-family: "FuturaPT";
+  line-height: 1.55;
+  font-weight: 700;
+  text-align: start;
+  margin: 0;
+}
+.price-info-block .title h3 span {
+  color: #4cf2a2;
+}
+.price-info-block .flex-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.price-info-block .flex-wrapper__item {
+  position: relative;
+}
+.price-info-block .flex-wrapper__item .img {
+  position: absolute;
+  right: -15%;
+  top: 74%;
+}
+.price-info-block .flex-wrapper__item .img img {
+  width: 140px;
+  height: 260px;
+}
+.price-info-block .flex-wrapper__item .img1 {
+  position: absolute;
+  right: -26%;
+  top: 75%;
+}
+.price-info-block .flex-wrapper__item .img1 img {
+  width: 140px;
+  height: 260px;
+}
+.price-info-block .flex-wrapper__item .subtitle-text {
+  background-image: url("../img/price-info-block/gray.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  font-size: 37px;
+  font-family: "FuturaPT";
+  line-height: 1.55;
+  font-weight: 700;
+  word-spacing: 15px;
+  padding: 30px 95px 30px 30px;
+}
+.price-info-block .flex-wrapper__item .subtitle-text span {
+  color: black;
+}
+.price-info-block .flex-wrapper__item .subtitle-text1 {
+  background-image: url("../img/price-info-block/green.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  font-size: 37px;
+  font-family: "FuturaPT";
+  line-height: 1.55;
+  font-weight: 700;
+  word-spacing: 15px;
+  padding: 30px 30px 30px 95px;
+}
+.price-info-block .flex-wrapper__item .subtitle-text1 span {
+  color: black;
+}
+.price-info-block .flex-wrapper__item .list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+}
+.price-info-block .flex-wrapper__item .list .gray {
+  display: inline-block;
+  margin-top: 11px;
+  font-size: 19px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-family: "FuturaPT";
+  color: #000;
+}
+.price-info-block .flex-wrapper__item .list .gray:before {
+  content: "";
+}
+.price-info-block .flex-wrapper__item .list .green {
+  display: inline-block;
+  margin-left: 60px;
+  margin-top: 11px;
+  font-size: 19px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-family: "FuturaPT";
+  color: #000;
+}
+.price-info-block .flex-wrapper__item .list .green:before {
+  content: "";
+}
+.price-info-block .flex-wrapper__item .list .yellow {
+  display: inline-block;
+  margin-left: 60px;
+  margin-top: 11px;
+  font-size: 19px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-family: "FuturaPT";
+  color: #000;
+}
+.price-info-block .flex-wrapper__item .list .yellow:before {
+  content: "";
 }
 
 .partners {
