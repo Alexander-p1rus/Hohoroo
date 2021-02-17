@@ -9,27 +9,28 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
 <nav class="menu">
-    <a class="menu-hohoro" href="">
+    <a  class="menu-hohoro" href="">
         <img src="img/logo.png" alt="">
     </a>
     <div class="menu-list">
-        <a href="">
+        <a style="scroll-behavior: smooth" href="#franchize">
             <div class="menu-list__item">Пакет франшизы</div>
         </a>
-        <a href="">
+        <a style="scroll-behavior: smooth" href="#hisory-block">
             <div class="menu-list__item">Отзывы</div>
         </a>
-        <a href="">
+        <a style="scroll-behavior: smooth" href="#partner">
             <div class="menu-list__item">Стать партнером</div>
         </a>
-        <a href="">
+        <a style="scroll-behavior: smooth" href="">
             <div class="menu-list__item"> СМИ о нас</div>
         </a>
-        <a href="">
+        <a style="scroll-behavior: smooth" href="">
             <div class="menu-list__item"><a href="/InformationBase/index.html" target="_blank"> База знаний</a></div>
         </a>
     </div>
@@ -71,6 +72,7 @@
     </div>
 </section>
 <!-- /.first-block -->
+
 <section class="business-block">
     <div class="container">
         <div class="business-block-advantages">
@@ -126,342 +128,6 @@
     </div>
 </section>
 <!-- /.second-block -->
-<!--<section class="calculator-block">-->
-<!--    <div class="container">-->
-<!--        <script>-->
-<!--            $(function () {-->
-<!--                var $document = $(document),-->
-<!--                    $inputRange = $('input[type="range"]');-->
-
-<!--                // Example functionality to demonstrate a value feedback-->
-<!--                function valueOutput(element) {-->
-<!--                    var value = element.value,-->
-<!--                        output = element.parentNode.getElementsByTagName('output')[0];-->
-<!--                    output.innerHTML = value;-->
-<!--                }-->
-
-<!--                for (var i = $inputRange.length - 1; i >= 0; i&#45;&#45;) {-->
-<!--                    valueOutput($inputRange[i]);-->
-<!--                }-->
-<!--                ;-->
-<!--                $document.on('input', 'input[type="range"]', function (e) {-->
-<!--                    valueOutput(e.target);-->
-<!--                });-->
-<!--                $inputRange.rangeslider({-->
-<!--                    polyfill: false-->
-<!--                });-->
-<!--            });-->
-
-<!--            /*-->
-<!--             Price Calculator v.0.3-->
-<!--             Coded by Ahmet Basar-->
-<!--             6/24/2015 8:03:46 AM :)-->
-<!--            */-->
-
-<!--            $("body").change(function () {-->
-<!--                // desktop var.-->
-<!--                var years = $('.val1').html();-->
-<!--                var examCost = $('.val2').html();-->
-<!--                var glassesCost = $('.val3').html();-->
-<!--                var lensCost = $('.val4').html();-->
-<!--                var solutionCost = $('.val5').html();-->
-
-<!--                // mobile var.-->
-<!--                var myears = $('.mval1').html();-->
-<!--                var mexamCost = $('.mval2').html();-->
-<!--                var mglassesCost = $('.mval3').html();-->
-<!--                var mlensCost = $('.mval4').html();-->
-<!--                var msolutionCost = $('.mval5').html();-->
-
-<!--                // desktop-->
-<!--                var totalprice = ((parseInt(examCost) + parseInt(glassesCost) + parseInt(lensCost) + parseInt(solutionCost)) * parseInt(years));-->
-
-<!--                // mobile-->
-<!--                var mtotalprice = ((parseInt(mexamCost) + parseInt(mglassesCost) + parseInt(mlensCost) + parseInt(msolutionCost)) * parseInt(myears));-->
-
-<!--                // desktop - mobile together.-->
-<!--                $(document).ready(function () {-->
-<!--                    $("#total").html(totalprice).formatCurrency();-->
-<!--                    $("#totalmobile").html(mtotalprice).formatCurrency();-->
-<!--                });-->
-
-
-<!--            });-->
-
-<!--            (function ($) {-->
-
-<!--                $.formatCurrency = {};-->
-
-<!--                $.formatCurrency.regions = [];-->
-
-<!--                // default Region is en-->
-<!--                $.formatCurrency.regions[''] = {-->
-<!--                    symbol: '$',-->
-<!--                    positiveFormat: '%s%n',-->
-<!--                    negativeFormat: '(%s%n)',-->
-<!--                    decimalSymbol: '.',-->
-<!--                    digitGroupSymbol: ',',-->
-<!--                    groupDigits: true-->
-<!--                };-->
-
-<!--                $.fn.formatCurrency = function (destination, settings) {-->
-
-<!--                    if (arguments.length == 1 && typeof destination !== "string") {-->
-<!--                        settings = destination;-->
-<!--                        destination = false;-->
-<!--                    }-->
-
-<!--                    // initialize defaults-->
-<!--                    var defaults = {-->
-<!--                        name: "formatCurrency",-->
-<!--                        colorize: false,-->
-<!--                        region: '',-->
-<!--                        global: true,-->
-<!--                        roundToDecimalPlace: 2, // roundToDecimalPlace: -1; for no rounding; 0 to round to the dollar; 1 for one digit cents; 2 for two digit cents; 3 for three digit cents; ...-->
-<!--                        eventOnDecimalsEntered: false-->
-<!--                    };-->
-<!--                    // initialize default region-->
-<!--                    defaults = $.extend(defaults, $.formatCurrency.regions['']);-->
-<!--                    // override defaults with settings passed in-->
-<!--                    settings = $.extend(defaults, settings);-->
-
-<!--                    // check for region setting-->
-<!--                    if (settings.region.length > 0) {-->
-<!--                        settings = $.extend(settings, getRegionOrCulture(settings.region));-->
-<!--                    }-->
-<!--                    settings.regex = generateRegex(settings);-->
-
-<!--                    return this.each(function () {-->
-<!--                        $this = $(this);-->
-
-<!--                        // get number-->
-<!--                        var num = '0';-->
-<!--                        num = $this[$this.is('input, select, textarea') ? 'val' : 'html']();-->
-
-<!--                        //identify '(123)' as a negative number-->
-<!--                        if (num.search('\\(') >= 0) {-->
-<!--                            num = '-' + num;-->
-<!--                        }-->
-
-<!--                        if (num === '' || (num === '-' && settings.roundToDecimalPlace === -1)) {-->
-<!--                            return;-->
-<!--                        }-->
-
-<!--                        // if the number is valid use it, otherwise clean it-->
-<!--                        if (isNaN(num)) {-->
-<!--                            // clean number-->
-<!--                            num = num.replace(settings.regex, '');-->
-
-<!--                            if (num === '' || (num === '-' && settings.roundToDecimalPlace === -1)) {-->
-<!--                                return;-->
-<!--                            }-->
-
-<!--                            if (settings.decimalSymbol != '.') {-->
-<!--                                num = num.replace(settings.decimalSymbol, '.');  // reset to US decimal for arithmetic-->
-<!--                            }-->
-<!--                            if (isNaN(num)) {-->
-<!--                                num = '0';-->
-<!--                            }-->
-<!--                        }-->
-
-<!--                        // evalutate number input-->
-<!--                        var numParts = String(num).split('.');-->
-<!--                        var isPositive = (num == Math.abs(num));-->
-<!--                        var hasDecimals = (numParts.length > 1);-->
-<!--                        var decimals = (hasDecimals ? numParts[1].toString() : '0');-->
-<!--                        var originalDecimals = decimals;-->
-
-<!--                        // format number-->
-<!--                        num = Math.abs(numParts[0]);-->
-<!--                        num = isNaN(num) ? 0 : num;-->
-<!--                        if (settings.roundToDecimalPlace >= 0) {-->
-<!--                            decimals = parseFloat('1.' + decimals); // prepend "0."; (IE does NOT round 0.50.toFixed(0) up, but (1+0.50).toFixed(0)-1-->
-<!--                            decimals = decimals.toFixed(settings.roundToDecimalPlace); // round-->
-<!--                            if (decimals.substring(0, 1) == '2') {-->
-<!--                                num = Number(num) + 1;-->
-<!--                            }-->
-<!--                            decimals = decimals.substring(2); // remove "0."-->
-<!--                        }-->
-<!--                        num = String(num);-->
-
-<!--                        if (settings.groupDigits) {-->
-<!--                            for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++) {-->
-<!--                                num = num.substring(0, num.length - (4 * i + 3)) + settings.digitGroupSymbol + num.substring(num.length - (4 * i + 3));-->
-<!--                            }-->
-<!--                        }-->
-
-<!--                        if ((hasDecimals && settings.roundToDecimalPlace == -1) || settings.roundToDecimalPlace > 0) {-->
-<!--                            num += settings.decimalSymbol + decimals;-->
-<!--                        }-->
-
-<!--                        // format symbol/negative-->
-<!--                        var format = isPositive ? settings.positiveFormat : settings.negativeFormat;-->
-<!--                        var money = format.replace(/%s/g, settings.symbol);-->
-<!--                        money = money.replace(/%n/g, num);-->
-
-<!--                        // setup destination-->
-<!--                        var $destination = $([]);-->
-<!--                        if (!destination) {-->
-<!--                            $destination = $this;-->
-<!--                        } else {-->
-<!--                            $destination = $(destination);-->
-<!--                        }-->
-<!--                        // set destination-->
-<!--                        $destination[$destination.is('input, select, textarea') ? 'val' : 'html'](money);-->
-
-<!--                        if (-->
-<!--                            hasDecimals &&-->
-<!--                            settings.eventOnDecimalsEntered &&-->
-<!--                            originalDecimals.length > settings.roundToDecimalPlace-->
-<!--                        ) {-->
-<!--                            $destination.trigger('decimalsEntered', originalDecimals);-->
-<!--                        }-->
-
-<!--                        // colorize-->
-<!--                        if (settings.colorize) {-->
-<!--                            $destination.css('color', isPositive ? 'black' : 'red');-->
-<!--                        }-->
-<!--                    });-->
-<!--                };-->
-
-<!--                // Remove all non numbers from text-->
-<!--                $.fn.toNumber = function (settings) {-->
-<!--                    var defaults = $.extend({-->
-<!--                        name: "toNumber",-->
-<!--                        region: '',-->
-<!--                        global: true-->
-<!--                    }, $.formatCurrency.regions['']);-->
-
-<!--                    settings = jQuery.extend(defaults, settings);-->
-<!--                    if (settings.region.length > 0) {-->
-<!--                        settings = $.extend(settings, getRegionOrCulture(settings.region));-->
-<!--                    }-->
-<!--                    settings.regex = generateRegex(settings);-->
-
-<!--                    return this.each(function () {-->
-<!--                        var method = $(this).is('input, select, textarea') ? 'val' : 'html';-->
-<!--                        $(this)[method]($(this)[method]().replace('(', '(-').replace(settings.regex, ''));-->
-<!--                    });-->
-<!--                };-->
-
-<!--                // returns the value from the first element as a number-->
-<!--                $.fn.asNumber = function (settings) {-->
-<!--                    var defaults = $.extend({-->
-<!--                        name: "asNumber",-->
-<!--                        region: '',-->
-<!--                        parse: true,-->
-<!--                        parseType: 'Float',-->
-<!--                        global: true-->
-<!--                    }, $.formatCurrency.regions['']);-->
-<!--                    settings = jQuery.extend(defaults, settings);-->
-<!--                    if (settings.region.length > 0) {-->
-<!--                        settings = $.extend(settings, getRegionOrCulture(settings.region));-->
-<!--                    }-->
-<!--                    settings.regex = generateRegex(settings);-->
-<!--                    settings.parseType = validateParseType(settings.parseType);-->
-
-<!--                    var method = $(this).is('input, select, textarea') ? 'val' : 'html';-->
-<!--                    var num = $(this)[method]();-->
-<!--                    num = num ? num : "";-->
-<!--                    num = num.replace('(', '(-');-->
-<!--                    num = num.replace(settings.regex, '');-->
-<!--                    if (!settings.parse) {-->
-<!--                        return num;-->
-<!--                    }-->
-
-<!--                    if (num.length == 0) {-->
-<!--                        num = '0';-->
-<!--                    }-->
-
-<!--                    if (settings.decimalSymbol != '.') {-->
-<!--                        num = num.replace(settings.decimalSymbol, '.');  // reset to US decimal for arthmetic-->
-<!--                    }-->
-
-<!--                    return window['parse' + settings.parseType](num);-->
-<!--                };-->
-
-<!--                function getRegionOrCulture(region) {-->
-<!--                    var regionInfo = $.formatCurrency.regions[region];-->
-<!--                    if (regionInfo) {-->
-<!--                        return regionInfo;-->
-<!--                    } else {-->
-<!--                        if (/(\w+)-(\w+)/g.test(region)) {-->
-<!--                            var culture = region.replace(/(\w+)-(\w+)/g, "$1");-->
-<!--                            return $.formatCurrency.regions[culture];-->
-<!--                        }-->
-<!--                    }-->
-<!--                    // fallback to extend(null) (i.e. nothing)-->
-<!--                    return null;-->
-<!--                }-->
-
-<!--                function validateParseType(parseType) {-->
-<!--                    switch (parseType.toLowerCase()) {-->
-<!--                        case 'int':-->
-<!--                            return 'Int';-->
-<!--                        case 'float':-->
-<!--                            return 'Float';-->
-<!--                        default:-->
-<!--                            throw 'invalid parseType';-->
-<!--                    }-->
-<!--                }-->
-
-<!--                function generateRegex(settings) {-->
-<!--                    if (settings.symbol === '') {-->
-<!--                        return new RegExp("[^\\d" + settings.decimalSymbol + "-]", "g");-->
-<!--                    } else {-->
-<!--                        var symbol = settings.symbol.replace('$', '\\$').replace('.', '\\.');-->
-<!--                        return new RegExp(symbol + "|[^\\d" + settings.decimalSymbol + "-]", "g");-->
-<!--                    }-->
-<!--                }-->
-
-<!--            })(jQuery);-->
-
-<!--        </script>-->
-
-<!--        <h1>Калькулятор прибыли</h1>-->
-
-<!--        <div>-->
-<!--            <div class="title">Количество проданных стаканов</div>-->
-<!--            <div class="description">Средняя цена напитка</div>-->
-<!--            <input type="range" min="5" max="100" step="1" value="50">-->
-<!--            <output class="val1 add"></output>-->
-<!--            <div class="ranges">-->
-<!--                <div class="range-left">5</div>-->
-<!--                <div class="range-center"></div>-->
-<!--                <div class="range-right">100</div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div>-->
-<!--            <div class="title">Арендная ставка</div>-->
-<!--            <div class="description">lorem ipsum dolor sit amet</div>-->
-<!--            <input type="range" min="50" max="250" step="1" value="75">-->
-<!--            <output class="val2 add"></output>-->
-<!--            <div class="ranges">-->
-<!--                <div class="range-left">50</div>-->
-<!--                <div class="range-center"></div>-->
-<!--                <div class="range-right">250</div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div>-->
-<!--            <div class="title">Средняя ценка напитка</div>-->
-<!--            <div class="description">lorem ipsum dolor sit amet</div>-->
-<!--            <input type="range" min="100" max="2000" step="1" value="200">-->
-<!--            <output class="val3 add"></output>-->
-<!--            <div class="ranges">-->
-<!--                <div class="range-left">100</div>-->
-<!--                <div class="range-center"></div>-->
-<!--                <div class="range-right">2000</div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="box">-->
-<!--            <div id="total"></div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--</section>-->
 
 <section class="third-block">
     <div class="container">
@@ -1107,7 +773,7 @@
             <h2>Продавай 25 стаканов кофе в день и <br> зарабатывай чистыми от 35 000 рублей в месяц</h2>
         </div>
         <div class="flex-wrapper">
-            <div class="flex-wrapper__item">
+            <div class="flex-wrapper__item flex">
                 <img src="img/hohoro%20machines/first-item.webp" alt="">
                 <div class="text">
                     Бизнес-центр <br>
@@ -1116,7 +782,7 @@
                     <span>Прибыль 90 000 рублей</span><br>
                 </div>
             </div>
-            <div class="flex-wrapper__item">
+            <div class="flex-wrapper__item flex">
                 <img src="img/hohoro%20machines/second-item.webp" alt="">
                 <div class="text">
                     Торгово-офисный центр "Алтын" <br>
@@ -1125,7 +791,7 @@
                     <span>Прибыль 50 000 рублей</span>
                 </div>
             </div>
-            <div class="flex-wrapper__item">
+            <div class="flex-wrapper__item block" >
                 <img src="img/hohoro%20machines/third-item.webp" alt="">
                 <div class="text">
                     Бъюти-коворкинг "Инди" Таганская 36 <br>
@@ -1176,19 +842,19 @@
         </div>
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="img/slider-block/first-block.jpg" style="width: 100%;" alt="">
+                <img src="img/slider-block/first-block.jpg"  alt="">
             </div>
             <div class="mySlides fade">
-                <img src="img/slider-block/second-block.jpg" style="width: 100%;" alt="">
+                <img src="img/slider-block/second-block.jpg"  alt="">
             </div>
             <div class="mySlides fade">
-                <img src="img/slider-block/third-block.jpg" style="width: 100%;" alt="">
+                <img src="img/slider-block/third-block.jpg"  alt="">
             </div>
             <div class="mySlides fade">
-                <img src="img/slider-block/fourth-block.jpg" style="width: 100%;" alt="">
+                <img src="img/slider-block/fourth-block.jpg"  alt="">
             </div>
             <div class="mySlides fade">
-                <img src="img/slider-block/fifth-block.jpg" style="width: 100%;" alt="">
+                <img src="img/slider-block/fifth-block.jpg"  alt="">
             </div>
             <a class="prev" onclick="plusSlides(-1)">
                 <div class="arrow"> &#10094</div>
@@ -1208,7 +874,7 @@
 </section>
 <!-- /.slider-block -->
 
-<section class="history-block">
+<section class="history-block" id="hisory-block">
     <div class="container">
         <div class="title">
             <h3><span>Реальные истории</span> наших партнеров</h3>
@@ -1333,7 +999,7 @@
 </section>
 <!-- /.proff-escord-block -->
 
-<section class="price-info-block">
+<section class="price-info-block" id="franchize">
     <div class="container">
         <div class="title">
             <h3><span>Сколько</span> это стоит?</h3>
@@ -1381,17 +1047,17 @@
                     <div class="yellow">Подсветка вывески</div>
                     <div class="yellow">Светодиодная лента по верху</div>
                     <div class="yellow">Светодиодная лента в зоне сиропов</div>
-                    <div class="yellow">Органайзер с диспенсерами для сухих ингредиентов</div>
+                    <div class="yellow" id="partner">Органайзер с диспенсерами для сухих ингредиентов</div>
                 </div>
                 <div class="img1">
-                    <img src="img/price-info-block/second-item.webp" alt="">
+                    <img src="img/price-info-block/second-item.webp" alt="" >
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="Hohoro-info-block">
+<section class="Hohoro-info-block" >
     <div class="polygon">
         <div class="hohoro-machine">
             <div class="title">Как стать <br> партнером</div>

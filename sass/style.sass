@@ -40,11 +40,15 @@ $main-font:'FuturaPT-book'
 
 .container
   width: 1170px
+  max-width: 100%
   margin: 0 auto
+  display: block
 
 
 body
   font-family: $main-font
+  a
+    scroll-behavior: smooth
 
 
 .menu
@@ -64,11 +68,10 @@ body
     a
       text-decoration: none
   &-list
+    width: 650px
     display: flex
-    justify-content: space-between
-    margin: 0 -50px
+    justify-content: space-around
     &__item
-      margin: 0 20px
       color: #141414
       font-size: 19px
       font-weight: 600
@@ -79,6 +82,22 @@ body
     margin-right: 35px
 
 
+@media (max-width: 1100px)
+  .menu
+    flex-direction: column
+    margin-bottom: 130px
+    position: static
+    img
+      margin: 0
+    &-list
+      align-items: center
+      justify-content: space-between
+      flex-direction: column
+      &__item
+        margin: 30px 0
+    button
+      margin: 40px 0
+
 .first-block
   overflow-x: hidden
   background-image: url("../img/first block/background.webp")
@@ -86,7 +105,7 @@ body
   background-size: cover
   background-position: left 70%
   display: flex
-  margin-top: 100px
+  margin-top: 50px
   height: 100vh
   &-wrapper
     height: 100vh
@@ -157,6 +176,24 @@ body
       height: 600px
 
 
+@media (max-width: 1100px)
+  .first-block
+    overflow-x: hidden
+    overflow-y: hidden
+    width: 100%
+    height: 1000px
+    display: block
+    margin: 0 auto
+  .first-block-wrapper
+    margin-left: 10%
+    margin-right: 10%
+    flex-direction: column
+    align-items: start
+  .first-block__img
+    img
+      width: auto
+      height: auto
+
 .business-block
   background-image: url("../img/second block/background.webp")
   background-repeat: no-repeat
@@ -216,7 +253,44 @@ body
 .third-block
   margin-top: 190px
 
+@media (max-width: 1100px)
+  .business-block
+    h2
+      margin-top: 0
+      font-size: 38px
+    background-position: 49% 0px
+    .business-block-advantages
+      width: 100%
+      margin: 0 auto
+      text-align: center
+      .flex-wrapper
+        margin-top: 30px
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        .flex-wrapper__item
+          margin-top: 30px
+          h3
+            color: #000000
+            font-size: 18px
+            font-family: $main-font,Arial,sans-serif
+            line-height: 1.55
+            font-weight: 700
+            margin-top: 10px
+            margin-bottom: 10px
+        .descr
+          color: #000000
+          font-size: 16px
+          font-family: $main-font,Arial,sans-serif
+          line-height: 1.55
+          font-weight: 400
+    .second-row
+      margin-top: 30px
+
+
+
 .pattern
+  width: 100%
   margin-bottom: 100px
   span
     color: $x-color-green
@@ -227,6 +301,8 @@ body
     font-weight: 600
     color: #000
     line-height: 1.23
+
+
 
   .main-flex-wrapper
     display: flex
@@ -255,6 +331,22 @@ body
           font-family: $main-font
           margin-top: 5px
 
+@media(max-width: 860px)
+  .pattern
+    padding-left: 5px
+    width: 100%
+    margin: 0 auto
+    .main-flex-wrapper
+      justify-content: space-around
+      align-items: start
+      h3
+        max-width: 270px
+      ul
+        margin-left: 20px
+        max-width: 250px
+      img
+        width: 227px
+        height: 227px
 
 .video-block
   background-color: #4CF2A2
@@ -286,6 +378,10 @@ body
       font-weight: 800
       font-family: $main-font
 
+@media (max-width: 1160px)
+  .video-block
+    iframe
+      width: 100%
 
 .founder-block
   margin-top: 120px
@@ -305,6 +401,24 @@ body
       text-align: start
       margin-left: -20px
 
+@media(max-width: 980px)
+  .pattern
+    padding-left: 5px
+    width: 100%
+    margin: 0 auto
+    .main-flex-wrapper
+      justify-content: space-around
+      align-items: start
+      h3
+        max-width: 270px
+      ul
+        margin-left: 20px
+        max-width: 250px
+      img
+        width: 229px
+        height: 250px
+      button
+        margin-left: 0
 
 .accordion-block
   margin-top: 140px
@@ -364,6 +478,26 @@ body
             color: #000
 
 
+@media(max-width: 1170px)
+  .accordion-block
+    width: 80%
+    margin: 140px auto 100px auto
+
+
+@media(max-width: 700px)
+  .accordion-block
+    .accordion-wrapper
+      .accordion-section
+         .accordion-body
+            ul
+              li
+                font-size: 12px
+    .accordion-wrapper
+      .wrapper
+        .town
+          font-size: 20px
+
+
 .help-start-block
   background-color: #F0F0F0
   padding: 80px 0
@@ -399,6 +533,12 @@ body
         font-weight: 300
         color: #000
 
+@media(max-width: 550px)
+  .help-start-block
+    .flex-wrapper
+      margin-left: 8%
+      flex-direction: column
+      justify-content: center
 
 .coffee-machines-block
   padding: 70px 0
@@ -431,6 +571,23 @@ body
         height: 400px
         text-align: center
 
+@media(max-width: 920px)
+  .coffee-machines-block
+    .title
+      h2
+        font-size: 30px
+    .flex-wrapper
+      flex-wrap: wrap
+      justify-content: space-around
+      .flex-wrapper__item
+        text-align: center
+        width: 180px
+        .text
+          font-size: 14px
+        img
+          width: 140px
+          height: 280px
+          text-align: center
 
 .location-help-block
   padding: 120px 0
@@ -472,6 +629,18 @@ body
         font-family: $main-font
         line-height: 1.35
 
+@media(max-width: 720px)
+  .location-help-block
+    padding: 120px 0
+    .flex-wrapper
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      margin-top: 30px
+      .flex-wrapper__item
+        margin-top: 45px
+
 
 .slider-block
   margin-bottom: 120px
@@ -490,13 +659,12 @@ body
         color: rgb(76, 242, 162)
   .slideshow-container
     left: 5%
-    max-width: 980px
+    width: 100%
     margin: 0 auto
-  max-width: 100%
-  position: relative
+
+    position: relative
   img
-    width: 907px
-    height: 540px
+    width: 100%
   .slideshow-container
     position: relative
   .prev
@@ -560,6 +728,107 @@ body
   .active
     background-color: #717171
 
+@media(max-width: 1100px)
+  .slider-block
+    width: 90%
+    margin: 120px auto 120px auto
+    .title
+      margin-bottom: 40px
+      h3
+        font-size: 30px
+
+    .arrow
+      position: absolute
+      width: auto
+      width: 8px
+      height: 8px
+      cursor: pointer
+      top: 11%
+      left: 27%
+    .arrow2
+      position: absolute
+      width: auto
+      width: 8px
+      height: 8px
+      cursor: pointer
+      top: 11%
+      left: 33%
+    .next
+      right: 11%
+      position: absolute
+      top: 50%
+      width: auto
+      font-size: 14px
+      transition: 0.6s ease
+      cursor: pointer
+      width: 20px
+      height: 20px
+      background-color: rgba(76,242,162,1)
+      border-radius: 50%
+    .prev
+      left: -3%
+      position: absolute
+      top: 50%
+      width: auto
+      font-size: 14px
+      transition: 0.6s ease
+      cursor: pointer
+      width: 20px
+      height: 20px
+      background-color: rgba(76,242,162,1)
+      border-radius: 50%
+    .dot
+      cursor: pointer
+      height: 7px
+      width: 7px
+
+@media(max-width: 500px)
+  .slider-block
+    .arrow
+      position: absolute
+      width: auto
+      width: 8px
+      height: 8px
+      cursor: pointer
+      top: 11%
+      left: 27%
+    .arrow2
+      position: absolute
+      width: auto
+      width: 8px
+      height: 8px
+      cursor: pointer
+      top: 11%
+      left: 33%
+    .next
+      right: 11%
+      position: absolute
+      top: 50%
+      width: auto
+      font-size: 10px
+      transition: 0.6s ease
+      cursor: pointer
+      width: 12px
+      height: 12px
+      background-color: rgba(76,242,162,1)
+      border-radius: 50%
+    .prev
+      left: -3%
+      position: absolute
+      top: 50%
+      width: auto
+      font-size: 10px
+      transition: 0.6s ease
+      cursor: pointer
+      width: 12px
+      height: 12px
+      background-color: rgba(76,242,162,1)
+      border-radius: 50%
+    .dot
+      cursor: pointer
+      height: 4px
+      width: 4px
+
 
 .history-block
   background-image: url("../img/bgHistory.jpg")
@@ -594,6 +863,20 @@ body
     font-family: $main-font
     width: 250px
 
+@media (max-width: 1030px)
+  .history-block
+    .title
+      h3
+        margin-bottom: 40px
+    .flex-wrapper
+      flex-direction: column
+      align-items: center
+      .video
+        margin-top: 35px
+@media (max-width: 540px)
+  .history-block
+    iframe
+      width: 340px
 
 .facts-block
   padding: 35px 0
@@ -625,6 +908,67 @@ body
         line-height: 1.55
         font-weight: 400
 
+@media(max-width: 700px)
+  .facts-block
+    padding: 35px 0
+    .title
+      h3
+        color: #000000
+        font-size: 46px
+        font-family: $main-font,Arial,sans-serif
+        line-height: 1.55
+        font-weight: 700
+        text-align: center
+        margin: 0
+        span
+          color: rgb(76, 242, 162)
+    .flex-wrapper
+      max-width: 350px
+      margin: 0 auto
+      &__item
+        display: flex
+        margin-top: 20px
+        img
+          width: 25px
+          height: 25px
+          margin-right: 15px
+        .text
+          color: #000000
+          font-size: 20px
+          font-family: $main-font,Arial,sans-serif
+          line-height: 1.55
+          font-weight: 400
+
+@media(max-width: 440px)
+  .facts-block
+    padding: 35px 0
+    .title
+      h3
+        color: #000000
+        font-size: 30px
+        font-family: $main-font,Arial,sans-serif
+        line-height: 1.55
+        font-weight: 700
+        text-align: center
+        margin: 0
+        span
+          color: rgb(76, 242, 162)
+    .flex-wrapper
+      max-width: 300px
+      margin: 0 auto
+      &__item
+        display: flex
+        margin-top: 20px
+        img
+          width: 15px
+          height: 15px
+          margin-right: 15px
+        .text
+          color: #000000
+          font-size: 15px
+          font-family: $main-font,Arial,sans-serif
+          line-height: 1.55
+          font-weight: 400
 
 .garants-block
   padding-top: 320px
@@ -674,6 +1018,114 @@ body
           width: 230px
           height: 430px
 
+@media (max-width: 1000px)
+  .garants-block
+    padding-top: 60px
+    padding-bottom: 350px
+    background-image: url("../img/backGRound.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 75% 50%
+    height: 100%
+    width: 100%
+    .main-block
+      height: 100%
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: start
+      align-content: start
+      .main-content
+        margin-left: 10%
+        text-align: start
+        .title
+          h3
+            font-size: 45px
+            font-family: $main-font
+            font-weight: 600
+            color: #000
+            line-height: 1.23
+        .text
+          max-width: 400px
+          color: #000000
+          font-size: 20px
+          font-family: $main-font,Arial,sans-serif
+          line-height: 1.55
+          font-weight: 500
+        .btn
+          button
+            margin-top: 45px
+            width: 260px
+            height: 55px
+      .img
+        margin-top: 40px
+        margin-left: 15%
+        display: flex
+        .img1
+
+          margin-right: 70px
+          img
+            width: 250px
+            height: 370px
+        .img2
+
+          img
+            width: 230px
+            height: 430px
+
+@media(max-width: 670px)
+  .garants-block
+    padding-top: 190px
+    padding-bottom: 160px
+    background-image: url("../img/backGRound.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 75% 50%
+    height: 100%
+    width: 100%
+    .main-block
+      height: 100%
+      width: 100%
+      display: flex
+      align-content: start
+      .main-content
+        .title
+          h3
+            font-size: 30px
+            font-family: $main-font
+            font-weight: 600
+            color: #000
+            line-height: 1.23
+        .text
+          color: #000000
+          font-size: 15px
+          font-family: $main-font,Arial,sans-serif
+          line-height: 1.55
+          font-weight: 500
+        .btn
+          button
+            margin-top: 45px
+            width: 260px
+            height: 55px
+      .img
+        display: flex
+        .img1
+
+          margin-right: 70px
+          img
+            width: 155px
+            height: 215px
+        .img2
+
+          img
+            width: 115px
+            height: 215px
+
+@media(max-width: 420px)
+.garants-block
+  .main-block
+    .img
+      margin-left: 0
 
 .proff-escord-block
   padding: 100px 0
@@ -705,6 +1157,79 @@ body
         font-family: $main-font
         color: #000
         margin-top: 20px
+
+@media(max-width: 1000px)
+  .proff-escord-block
+    padding: 100px 0
+    .title
+      h3
+        color: #000000
+        font-size: 46px
+        font-family: $main-font
+        line-height: 1.55
+        font-weight: 700
+        text-align: center
+        margin: 0
+        span
+          color: rgb(76, 242, 162)
+    .flex-wrapper
+      width: 90%
+      margin: 0 auto
+      margin-top: 90px
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      &__item
+        max-width: 350px
+        margin-top: 70px
+        flex: 0 0 48%
+        img
+          width: 65px
+          height: 65px
+        .text
+          font-size: 20px
+          font-weight: 400
+          font-family: $main-font
+          color: #000
+          margin-top: 20px
+
+@media(max-width: 744px)
+  .proff-escord-block
+    padding: 100px 0
+    .title
+      h3
+        color: #000000
+        font-size: 35px
+        font-family: $main-font
+        line-height: 1.55
+        font-weight: 700
+        text-align: center
+        margin: 0
+        span
+          color: rgb(76, 242, 162)
+    .flex-wrapper
+      width: 90%
+      margin: 0 auto
+      margin-top: 90px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      &__item
+        max-width: 300px
+        margin-top: 70px
+        flex: 0 0 48%
+        text-align: center
+        img
+          width: 65px
+          height: 65px
+        .text
+          font-size: 20px
+          font-weight: 400
+          font-family: $main-font
+          color: #000
+          margin-top: 20px
 
 
 .price-info-block
@@ -808,6 +1333,163 @@ body
             content: ""
             @extend %yellow-square
 
+@media(max-width: 1035px)
+  .price-info-block
+    width: 95%
+    margin: 0 auto
+    margin-top: 75px
+    position: relative
+    .title
+      h3
+        color: #000000
+        font-size: 46px
+        font-family: $main-font
+        line-height: 1.55
+        font-weight: 700
+        text-align: center
+        margin: 0
+        span
+          color: rgb(76, 242, 162)
+    .flex-wrapper
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-direction: column
+      margin-top: 0
+      &__item
+        margin-top: 120px
+        position: relative
+        .img
+          position: absolute
+          left: 75%
+          top: 74%
+          img
+            width: 140px
+            height: 260px
+        .img1
+          position: absolute
+          left: 75%
+          top: 75%
+          img
+            width: 140px
+            height: 260px
+        .subtitle-text
+          max-width: 400px
+          background-repeat: no-repeat
+          background-size: cover
+          color: #ffffff
+          font-size: 37px
+          font-family: $main-font
+          line-height: 1.55
+          font-weight: 700
+          word-spacing: 15px
+          padding: 30px 95px 30px 30px
+          span
+            color: black
+        .subtitle-text1
+          width: 400px
+          background-image: url("../img/price-info-block/green.svg")
+          background-repeat: no-repeat
+          background-size: cover
+          color: #ffffff
+          font-size: 37px
+          font-family: $main-font
+          line-height: 1.55
+          font-weight: 700
+          word-spacing: 15px
+          padding: 30px 30px 30px 95px
+          span
+            color: black
+        .list
+          display: flex
+          flex-direction: column
+          margin-top: 45px
+          .yellow
+            font-size: 14px
+          .green
+            font-size: 14px
+          .gray
+            font-size: 14px
+
+@media (max-width: 580px)
+  .price-info-block
+    width: 95%
+    margin: 0 auto
+    margin-top: 75px
+    margin-left: 10px
+    position: relative
+    .title
+      h3
+        color: #000000
+        font-size: 30px
+        font-family: $main-font
+        line-height: 1.55
+        font-weight: 700
+        text-align: center
+        margin: 0
+        span
+          color: rgb(76, 242, 162)
+    .flex-wrapper
+      position: relative
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      margin-top: 0
+      &__item
+        margin-top: 140px
+        position: relative
+        .img
+          position: absolute
+          left: 101%
+          top: 74%
+          img
+            width: 100px
+            height: 180px
+        .img1
+          position: absolute
+          left: 99%
+          top: 75%
+          img
+            width: 100px
+            height: 180px
+        .subtitle-text
+          word-spacing: 1px
+          padding: 13px 24px
+          max-width: 200px
+          background-repeat: no-repeat
+          background-size: cover
+          color: #ffffff
+          font-size: 20px
+          font-family: $main-font
+          line-height: 1.55
+          font-weight: 700
+          span
+            color: black
+        .subtitle-text1
+          padding: 13px 30px 18px 64px
+          word-spacing: 1px
+          max-width: 200px
+          background-image: url("../img/price-info-block/green.svg")
+          background-repeat: no-repeat
+          background-size: cover
+          color: #ffffff
+          font-size: 20px
+          font-family: $main-font
+          line-height: 1.55
+          font-weight: 700
+          span
+            color: black
+        .list
+          display: flex
+          flex-direction: column
+          margin-top: 45px
+          .yellow
+            font-size: 12px
+          .green
+            font-size: 12px
+          .gray
+            font-size: 12px
 
 .Hohoro-info-block
   width: 100%
