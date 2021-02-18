@@ -89,7 +89,6 @@ body a {
 @media (max-width: 1100px) {
   .menu {
     flex-direction: column;
-    margin-bottom: 130px;
     position: static;
   }
   .menu img {
@@ -224,7 +223,7 @@ body a {
   .first-block-wrapper {
     margin-left: 0;
     margin-right: 0;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -374,6 +373,8 @@ body a {
 .pattern {
   width: 100%;
   margin-bottom: 50px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .pattern span {
   color: #1bcf7b;
@@ -392,8 +393,7 @@ body a {
   align-items: center;
 }
 .pattern .main-flex-wrapper__item img {
-  width: 470px;
-  height: 340px;
+  height: 300px;
 }
 .pattern .main-flex-wrapper__item h3 {
   font-weight: 600;
@@ -418,6 +418,12 @@ body a {
 }
 
 @media (max-width: 860px) {
+  .first-block-wrapper{
+    flex-direction: column;
+  }
+  .pattern .main-title{
+    font-size: 36px;
+  }
   .third-block {
     margin-top: 70px;
   }
@@ -426,6 +432,7 @@ body a {
     padding-left: 5px;
     width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
   }
   .pattern .main-flex-wrapper {
     justify-content: space-around;
@@ -444,7 +451,7 @@ body a {
   }
   .pattern .main-flex-wrapper img {
     width: auto;
-    height: 300px;
+    height: 200px;
     margin-left: -20px;
   }
   .pattern .main-flex-wrapper .main-flex-wrapper__item {
@@ -519,6 +526,7 @@ body a {
     padding-left: 5px;
     width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
   }
   .founder-block .pattern h2 {
     margin-top: 0;
@@ -660,6 +668,9 @@ body a {
   }
   .accordion-block .accordion-wrapper .wrapper .town {
     font-size: 20px;
+  }
+  .founder-block .pattern h2{
+    font-size: 40px;
   }
 }
 .help-start-block {
@@ -863,7 +874,7 @@ body a {
 }
 .slider-block .slideshow-container {
   left: 5%;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   position: relative;
 }
@@ -1111,6 +1122,9 @@ body a {
 @media (max-width: 540px) {
   .history-block iframe {
     width: 340px;
+  }
+  .founder-block .pattern h2{
+    font-size: 34px;
   }
 }
 .facts-block {
@@ -1546,7 +1560,7 @@ body a {
 }
 .price-info-block .flex-wrapper__item .img1 {
   position: absolute;
-  right: -26%;
+  right: 0;
   top: 75%;
 }
 .price-info-block .flex-wrapper__item .img1 img {
@@ -1662,6 +1676,7 @@ body a {
     position: absolute;
     left: 75%;
     top: 74%;
+    width: 140px;
   }
   .price-info-block .flex-wrapper__item .img img {
     width: 140px;
@@ -1671,6 +1686,7 @@ body a {
     position: absolute;
     left: 75%;
     top: 75%;
+    width: 140px;
   }
   .price-info-block .flex-wrapper__item .img1 img {
     width: 140px;
@@ -1769,6 +1785,7 @@ body a {
     position: absolute;
     left: 75%;
     top: 75%;
+    width: 100px;
   }
   .price-info-block .flex-wrapper__item .img1 img {
     z-index: -10;
@@ -1916,7 +1933,7 @@ body a {
 .Hohoro-info-block .instruction .btn {
   position: absolute;
   top: 76%;
-  left: 25%;
+  left: 5%;
 }
 .Hohoro-info-block .instruction .btn button {
   width: 260px;
@@ -2163,10 +2180,10 @@ body a {
   .Hohoro-info-block .instruction .btn {
     position: absolute;
     top: 76%;
-    left: 25%;
+    left: 15%;
   }
   .Hohoro-info-block .instruction .btn button {
-    width: 170px;
+    width: 140px;
     height: 55px;
   }
 }
@@ -2692,7 +2709,7 @@ body a {
 .popup {
   margin: 0 auto;
   background-color: #4cf2a2;
-  width: 600px;
+  max-width: 600px;
   text-align: center;
   padding-bottom: 40px;
   position: relative;
@@ -2838,7 +2855,7 @@ body a {
 }
 @media (max-width: 767px) {
   .selection-wrap {
-    width: 100%;
+    width: 90%;
   }
 }
 .total-wrap {
@@ -2848,7 +2865,7 @@ body a {
 }
 @media (max-width: 767px) {
   .total-wrap {
-    width: 100%;
+    width: 90%;
   }
 }
 .total-wrap:before {
