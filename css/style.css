@@ -3007,3 +3007,7 @@ label {
   outline: dotted 1px #4CF2A2;
   outline-offset: 0.45rem;
 }
+#amount{
+ color : #4CF2A2;
+  font-weight: bold;
+}
