@@ -2694,14 +2694,13 @@ body a {
   overflow: auto;
   background-color: rgba(150, 141, 141, 0.8);
 }
-.modal .close {
-  margin-top: 5px;
+.popup .close {
   margin-right: 20px;
   font-size: 60px;
   top: 0;
   right: 0;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   z-index: 1002;
   font-weight: 700;
 }
@@ -2763,6 +2762,31 @@ body a {
 }
 .popup a {
   color: #ff8562;
+}
+@media (max-width: 767px) {
+  .popup {
+  max-width: 400px;
+    margin: 0px auto;
+    margin-top: 40px;
+  }
+  .popup .img, .popup .img img {
+    height: 250px;
+  }
+
+  .popup .title{
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.23;
+    margin-top: 30px;
+  }
+  .popup .input {
+    width: 320px;
+    height: 40px;
+  }
+  .popup button {
+    width: 320px;
+    height: 40px;
+  }
 }
 
 .burger {
