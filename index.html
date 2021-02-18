@@ -34,8 +34,8 @@
         <a style="scroll-behavior: smooth" href="">
             <div class="menu-list__item"> СМИ о нас</div>
         </a>
-        <a style="scroll-behavior: smooth" href="">
-            <div class="menu-list__item"><a href="/InformationBase/index.html" target="_blank"> База знаний</a></div>
+        <a style="scroll-behavior: smooth" href="/InformationBase/index.html" target="_blank">
+            <div class="menu-list__item">База знаний</div>
         </a>
     </div>
     <div class="burger">
@@ -108,7 +108,6 @@
 </div>
 
 
-<!-- /.first-block -->
 <section class="business-block">
     <div class="container">
         <div class="business-block-advantages ">
@@ -166,7 +165,56 @@
         </div>
     </div>
 </section>
-<!-- /.second-block -->
+
+<section class="calculator">
+    <form class="pricing-calculator">
+        <div class="price_form_wrap">
+
+            <div class="selection-wrap">
+                <h2>Расчитай свою прибль</h2>
+                <div class="toggle">
+                    <input type="radio" name="level" value="Standard" id="levelBranded" checked="checked" />
+                    <label for="levelBranded">Стандарт <span>375 000 руб</span></label>
+                    <input type="radio" name="level" value="Personalized" id="levelPersonalized" />
+                    <label for="levelPersonalized">Уникальный дизайн <span>Индивидуально</span></label>
+                    <input type="radio" name="level" value="Premium" id="levelUltimate" />
+                    <label for="levelUltimate">Премиум <span>390 000 руб</span></label>
+                </div>
+                <div class="input_container">
+                    <label for="cupQuantity">Количество проданных стаканов <span>0</span></label>
+                    <input type="range" min="0" max="100" value="13" class="slider" name="cupQuantity" id="myRange">
+                </div>
+                <div class="input_container">
+                    <label for="cupPrice">Цена одного стакана: <span>10</span></label>
+                    <input type="range" min="50" max="100" value="100" class="slider" name="cupPrice" id="myRange">
+                </div>
+                <h3>Стоимость аренды</h3>
+                <div class="toggle">
+                    <input type="radio" name="rent" value="Офис" id="rentBasic" checked="checked" />
+                    <label for="rentBasic">Офис <span>5000 руб</span></label>
+                    <input type="radio" name="rent" value="Магазин" id="rentFast" />
+                    <label for="rentFast">Магазин <span>8000 руб</span></label>
+                    <input type="radio" name="rent" value="Спорт" id="rentExpress" />
+                    <label for="rentExpress">Спорт Объект <span>12000 руб</span></label>
+                </div>
+            </div>
+            <div class="total-wrap">
+                <div class="total">
+                    <span>Ваша прибль</span>
+                    <span id="amount"></span>
+                </div>
+                <div class="review">
+<!--                    <div id="design-type">Дизайн : <span></span></div>-->
+                    <h4 id="copywriting-num">Количество проданных стаканов : <span></span></h4>
+                    <h4 id="non-copywriting-num">Цена одного стакана : <span></span></h4>
+                    <h4 id="rent">Стоимость аренды : <span></span></h4>
+                    <h4 id="">Окупится за  <span>100</span> дней</h4>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
 
 <section class="third-block">
     <div class="container">
