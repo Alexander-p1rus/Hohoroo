@@ -1772,7 +1772,7 @@ body a {
   .price-info-block .flex-wrapper__item .img {
     position: absolute;
     z-index: -10;
-    left: 75%;
+    left: 55%;
     top: 74%;
   }
   .price-info-block .flex-wrapper__item .img img {
@@ -1783,7 +1783,7 @@ body a {
   .price-info-block .flex-wrapper__item .img1 {
     z-index: -10;
     position: absolute;
-    left: 75%;
+    left: 55%;
     top: 75%;
     width: 100px;
   }
@@ -2855,7 +2855,7 @@ body a {
 }
 @media (max-width: 767px) {
   .selection-wrap {
-    width: 90%;
+    width: 85%;
   }
 }
 .total-wrap {
@@ -2865,7 +2865,7 @@ body a {
 }
 @media (max-width: 767px) {
   .total-wrap {
-    width: 90%;
+    width: 85%;
   }
 }
 .total-wrap:before {
