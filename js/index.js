@@ -56,3 +56,55 @@ currentSlide=(n)=>{
 }
 
 
+const modal=document.querySelector('.modal')
+const btnModal=document.querySelectorAll('.btn-modal')
+const closeModal =document.querySelector('.close')
+
+btnModal.forEach((btn)=>{
+    console.log(btn)
+    btn.onclick=()=>{
+        event.preventDefault()
+        modal.style.display='block'
+        document.querySelector('body').style.overflow='hidden'
+        console.log(document.querySelector('body').style.overflow)
+        console.log(1)
+
+    }
+})
+
+closeModal.onclick=()=>{
+    modal.style.display='none'
+    document.querySelector('body').style.overflow='auto'
+}
+
+window.onclick=(e)=>{
+    if(e.target==modal){
+        modal.style.display='none'
+        document.querySelector('body').style.overflow='auto'
+    }
+}
+
+const burger=document.querySelector('.burger')
+const navigation=document.querySelector('.navigation')
+const closeNav=document.querySelector('.close-nav')
+const menuItem=document.querySelectorAll('.menu-list__item')
+
+burger.onclick=()=>{
+    navigation.style.display='block'
+}
+
+closeNav.onclick=()=>{
+    navigation.style.display='none'
+}
+
+window.onclick=(e)=>{
+    if(e.target==navigation){
+        navigation.style.display='none'
+    }
+}
+
+menuItem.forEach((item)=>{
+    item.onclick=()=>{
+        navigation.style.display='none'
+    }
+})

@@ -1,4 +1,4 @@
-.last-block .flex-wrapper__form button, .partners .btn button, .Hohoro-info-block .instruction .btn button, .garants-block .main-block .main-content .btn button, .history-block button, .founder-block .pattern button, .video-block .wrapper button, .business-block-advantages .flex-wrapper__item button, .first-block button, .menu button {
+.popup button, .last-block .flex-wrapper__form button, .partners .btn button, .Hohoro-info-block .instruction .btn button, .garants-block .main-block .main-content .btn button, .history-block button, .founder-block .pattern button, .video-block .wrapper button, .business-block-advantages .flex-wrapper__item button, .first-block button, .menu button {
   color: #171717;
   background-color: #fcee21;
   height: 40px;
@@ -63,6 +63,7 @@ body a {
   top: 0;
 }
 .menu img {
+  z-index: 100;
   width: 250px;
   margin-left: 35px;
 }
@@ -106,6 +107,26 @@ body a {
   }
   .menu button {
     margin: 40px 0;
+  }
+}
+@media (max-width: 560px) {
+  .menu {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu .menu-hohoro img {
+    width: 200px;
+    margin-bottom: 0;
+  }
+  .menu .menu-list {
+    display: none;
+  }
+  .menu button {
+    display: none;
+  }
+  .menu .burger {
+    display: block;
   }
 }
 .first-block {
@@ -319,6 +340,7 @@ body a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
   }
   .business-block .business-block-advantages .flex-wrapper .flex-wrapper__item {
     margin-top: 30px;
@@ -508,6 +530,9 @@ body a {
   }
   .founder-block .pattern .main-flex-wrapper button {
     margin-left: 0;
+  }
+  .founder-block .pattern .main-flex-wrapper .main-flex-wrapper__item {
+    margin: 70px 0;
   }
 }
 .map-block {
@@ -2600,4 +2625,112 @@ body a {
   .footer .flex-wrapper .logo {
     margin-bottom: 20px;
   }
+}
+.modal {
+  top: 0;
+  left: 0;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(150, 141, 141, 0.8);
+}
+
+.popup {
+  margin: 0 auto;
+  background-color: #4cf2a2;
+  width: 600px;
+  text-align: center;
+  padding-bottom: 40px;
+  position: relative;
+}
+.popup .close {
+  margin-top: 3px;
+  margin-right: 5px;
+  position: absolute;
+  font-size: 45px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.popup .img {
+  height: 400px;
+}
+.popup .title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.23;
+  margin-top: 130px;
+  font-weight: 600;
+  font-family: "FuturaPT-book";
+}
+.popup .subtitle {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 300;
+  color: #000;
+  font-family: "FuturaPT-book";
+}
+.popup .input {
+  padding-left: 15px;
+  outline: 0;
+  outline-offset: 0;
+  width: 470px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid #c9c9c9;
+  margin-top: 20px;
+}
+.popup button {
+  align-items: center;
+  margin: 20px auto;
+  display: block;
+  width: 470px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid #c9c9c9;
+}
+.popup a {
+  color: #ff8562;
+}
+
+.burger {
+  display: none;
+  z-index: 100;
+}
+.burger .line {
+  width: 20px;
+  height: 2px;
+  margin-top: 3px;
+  color: black;
+  background-color: black;
+}
+
+.navigation {
+  top: 0;
+  left: 0;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #d2d2d2;
+}
+.navigation .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation .flex img {
+  width: 200px;
+}
+.navigation .flex span {
+  font-size: 50px;
+}
+.navigation .menu-list {
+  margin: 400px auto 0 auto;
 }

@@ -63,6 +63,7 @@ body
   padding: 20px 0
   top: 0
   img
+    z-index: 100
     width: 250px
     margin-left: 35px
     a
@@ -99,6 +100,22 @@ body
         margin: 15px 0
     button
       margin: 40px 0
+
+@media (max-width: 560px)
+  .menu
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    .menu-hohoro
+      img
+        width: 200px
+        margin-bottom: 0
+    .menu-list
+      display: none
+    button
+      display: none
+    .burger
+      display: block
 
 .first-block
   overflow-x: hidden
@@ -289,6 +306,7 @@ body
         display: flex
         justify-content: space-around
         align-items: center
+        flex-direction: column
         .flex-wrapper__item
           margin-top: 30px
           text-align: center
@@ -454,7 +472,8 @@ body
           height: 320px
         button
           margin-left: 0
-
+        .main-flex-wrapper__item
+          margin: 70px 0
 .map-block
   margin-top: 175px
   width: 100%
@@ -2275,3 +2294,97 @@ body
         margin-top: 20px
       .logo
         margin-bottom: 20px
+
+.modal
+  top: 0
+  left: 0
+  display: none
+  position: fixed
+  z-index: 1000
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgba(150, 141, 141, 0.8)
+
+.popup
+  margin: 0 auto
+  background-color: #4cf2a2
+  width: 600px
+  text-align: center
+  padding-bottom: 40px
+  position: relative
+  .close
+    margin-top: 3px
+    margin-right: 5px
+    position: absolute
+    font-size: 45px
+    top: 0
+    right: 0
+    cursor: pointer
+  .img
+    height: 400px
+  .title
+    text-align: center
+    font-size: 36px
+    line-height: 1.23
+    margin-top: 130px
+    font-weight: 600
+    font-family: $main-font
+  .subtitle
+    margin-top: 20px
+    text-align: center
+    font-size: 16px
+    line-height: 1.55
+    font-weight: 300
+    color: #000
+    font-family: $main-font
+  .input
+    padding-left: 15px
+    outline: 0
+    outline-offset: 0
+    width: 470px
+    height: 60px
+    border-radius: 30px
+    border: 1px solid #c9c9c9
+    margin-top: 20px
+  button
+    @extend %button
+    align-items: center
+    margin: 20px auto
+    display: block
+    width: 470px
+    height: 60px
+    border-radius: 30px
+    border: 1px solid #c9c9c9
+  a
+    color: #ff8562
+
+.burger
+  display: none
+  z-index: 100
+  .line
+    width: 20px
+    height: 2px
+    margin-top: 3px
+    color: black
+    background-color: black
+
+.navigation
+  top: 0
+  left: 0
+  display: none
+  position: fixed
+  z-index: 1000
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgb(210, 210, 210)
+  .flex
+    display: flex
+    justify-content: space-between
+    img
+      width: 200px
+    span
+      font-size: 50px
+  .menu-list
+    margin: 400px auto 0 auto
