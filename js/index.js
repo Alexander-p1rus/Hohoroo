@@ -78,6 +78,7 @@ closeModal.onclick=()=>{
 }
 
 window.onclick=(e)=>{
+    console.log(e.target)
     if(e.target==modal){
         modal.style.display='none'
         document.querySelector('body').style.overflow='auto'
@@ -98,6 +99,11 @@ closeNav.onclick=()=>{
 }
 
 window.onclick=(e)=>{
+    if(e.target==modal){
+        modal.style.display='none'
+        document.querySelector('body').style.overflow='auto'
+    }
+
     if(e.target==navigation){
         navigation.style.display='none'
     }
