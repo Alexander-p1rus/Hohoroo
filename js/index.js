@@ -134,48 +134,36 @@ $( document ).ready(function() {
 
 $(window).on('load', function() {
 
-    var design = $("input[name=level]:checked").val();
     var cupQuantity = parseFloat($("input[name=cupQuantity]").val());
     var cupPrice = parseFloat($("input[name=cupPrice]").val());
-    var rent = parseFloat($("input[name=rent]:checked").val());
+    var rentCost = parseFloat($("input[name=rentCost]").val());
 
-    $("#design-type span").html(design);
-    $("#copywriting-num span").html(cupQuantity);
-    $("#non-copywriting-num span").html(cupPrice);
-    $("#rent span").html(cupPrice);
-    $("#add-ons span").html(rent);
+    $("#cup-quantity span").html(cupQuantity);
+    $("#cup-price span").html(cupPrice);
+    $("#rent-cost span").html(rentCost);
 
-    var total = (cupQuantity * cupPrice  * 0.55 * 30) - 5000;
+    var total = (cupQuantity * cupPrice  * 0.55 * 30) - rentCost;
     $("#amount").html(parseInt(total));
+
+    var payback = 375000 / parseInt(total) * 30 / 7;
+    $("#payback span").html(parseInt(payback));
 });
 $(document).on('input change', 'form.pricing-calculator :input', function() {
-    var design = $("input[name=level]:checked").val();
     var cupQuantity = parseFloat($("input[name=cupQuantity]").val());
     var cupPrice = parseFloat($("input[name=cupPrice]").val());
-    var rent = $("input[name=rent]:checked").val();
+    var rentCost = parseFloat($("input[name=rentCost]").val());
 
-    $("#design-type span").html(design);
-    $("#copywriting-num span").html(cupQuantity);
+    $("#cup-quantity span").html(cupQuantity);
     $("label[for=cupQuantity] span").html(cupQuantity);
-    $("#non-copywriting-num span").html(cupPrice);
+    $("#cup-price span").html(cupPrice);
     $("label[for=cupPrice] span").html(cupPrice);
-    $("#rent span").html(rent);
+    $("#rent-cost span").html(rentCost);
+    $("label[for=rentCost] span").html(rentCost);
 
-    switch (rent) {
-        case 'Офис':
-            var RentCost = 5000;
-            break;
-        case 'Магазин':
-            var RentCost = 8000;
-            break;
-        case 'Спорт':
-            var RentCost = 12000;
-            break;
-        default:
-            var RentCost = 5000;
-    }
-
-    var total = ((cupQuantity * cupPrice  * 0.55 * 30) - RentCost);
+    var total = ((cupQuantity * cupPrice  * 0.55 * 30) - rentCost);
     $("#amount").html(parseInt(total));
+
+    var payback = 375000 / parseInt(total) * 30 / 7;
+    $("#payback span").html(parseInt(payback));
 
 });

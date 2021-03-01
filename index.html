@@ -175,14 +175,6 @@
         <div class="price_form_wrap">
             <div class="selection-wrap">
                 <h2>Расчитай свою прибль</h2>
-<!--                <div class="toggle">-->
-<!--                    <input type="radio" name="level" value="Стандарт" id="levelBranded" checked="checked" />-->
-<!--                    <label for="levelBranded">Стандарт <span>375 000 руб</span></label>-->
-<!--                    <input type="radio" name="level" value="Уникальный" id="levelPersonalized" />-->
-<!--                    <label for="levelPersonalized">Уникальный<span>Индивидуально</span></label>-->
-<!--                    <input type="radio" name="level" value="Премиум" id="levelUltimate" />-->
-<!--                    <label for="levelUltimate">Премиум <span>390 000 руб</span></label>-->
-<!--                </div>-->
                 <div class="input_container">
                     <label for="cupQuantity">Количество проданных стаканов <span>13</span></label>
                     <input type="range" min="0" max="100" value="13" class="slider" id="cupQuantity" name="cupQuantity">
@@ -191,27 +183,21 @@
                     <label for="cupPrice">Цена одного стакана: <span>100</span></label>
                     <input type="range" min="50" max="100" value="100" class="slider" id="cupPrice" name="cupPrice">
                 </div>
-                <h3>Стоимость аренды</h3>
-                <div class="toggle">
-                    <input type="radio" name="rent" value="Офис" id="rentBasic" checked="checked" />
-                    <label for="rentBasic">Офис <span>5000 руб</span></label>
-                    <input type="radio" name="rent" value="Магазин" id="rentFast" />
-                    <label for="rentFast">Магазин <span>8000 руб</span></label>
-                    <input type="radio" name="rent" value="Спорт" id="rentExpress" />
-                    <label for="rentExpress">СпортОбъект <span>12000 руб</span></label>
+                <div class="input_container">
+                    <label for="rentCost">Стоимость аренды <span>5000</span></label>
+                    <input type="range" min="1000" max="10000" value="5000" step="500" class="slider" id="rentCost" name="rentCost">
                 </div>
             </div>
             <div class="total-wrap">
                 <div class="total">
-                    <h3>Ваша прибль</h3>
+                    <h3>Прибль в месяц</h3>
                     <span id="amount">16450</span>
                 </div>
                 <div class="review">
-<!--                    <h4 id="design-type">Дизайн : <span></span></h4>-->
-                    <h4 id="copywriting-num">Количество проданных стаканов : <span>13</span></h4>
-                    <h4 id="non-copywriting-num">Цена одного стакана : <span>100</span></h4>
-                    <h4 id="rent">Стоимость аренды : <span>100</span></h4>
-                    <h4 id="">Окупится за  <span>100</span> дней</h4>
+                    <h4 id="cup-quantity">Количество проданных стаканов : <span>13</span></h4>
+                    <h4 id="cup-price">Цена одного стакана : <span>100</span></h4>
+                    <h4 id="rent-cost">Стоимость аренды : <span>100</span></h4>
+                    <h4 id="payback">Окупится за  <span>300</span> недель</h4>
                 </div>
             </div>
         </div>
